@@ -41,5 +41,8 @@ class AppServiceProvider extends ServiceProvider
         Blade::directive('setting', function ($expression) {
             return "<?php echo \App\Models\Setting::get({$expression}); ?>";
         });
+
+        // 5. Global Bootstrap 5 Pagination Formatting
+        \Illuminate\Pagination\Paginator::useBootstrapFive();
     }
 }

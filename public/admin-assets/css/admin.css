@@ -1150,6 +1150,47 @@ body.login-body-light {
     box-shadow: 0 4px 10px rgba(5, 150, 105, 0.25);
 }
 
+/* ── Modern Enterprise Pagination Styling ─────────────────────────────────── */
+.pagination {
+    gap: 4px;
+    margin-bottom: 0;
+    display: inline-flex;
+    align-items: center;
+}
+
+.pagination .page-item .page-link {
+    border: 1px solid #E2E8F0;
+    color: #475569;
+    background-color: #FFFFFF;
+    border-radius: 8px !important;
+    padding: 6px 12px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.pagination .page-item .page-link:hover {
+    background-color: #F1F5F9;
+    color: #2563EB;
+    border-color: #CBD5E1;
+    transform: translateY(-1px);
+}
+
+.pagination .page-item.active .page-link {
+    background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%) !important;
+    border-color: #2563EB !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.28);
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #94A3B8;
+    background-color: #F8FAFC;
+    border-color: #E2E8F0;
+    opacity: 0.7;
+}
+
 .table-search-input {
     background: #F8FAFC;
     border: 1px solid #E2E8F0;
