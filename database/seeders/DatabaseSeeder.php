@@ -17,9 +17,9 @@ class DatabaseSeeder extends Seeder
     {
         // 1. Admin User
         User::updateOrCreate(
-            ['email' => 'admin@ipekharita.com'],
+            ['email' => 'admin@ipekmuhendislik.com.tr'],
             [
-                'name' => 'İpek Harita Yönetici',
+                'name' => 'İpek Mühendislik Yönetici',
                 'password' => Hash::make('password'),
             ]
         );
