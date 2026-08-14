@@ -13,7 +13,6 @@
 
 @include('admin.partials.alerts')
 
-<!-- Modül Türü Filtreleri -->
 <div class="d-flex flex-wrap gap-2 mb-4">
     <a href="{{ route('admin.faqs.index') }}" class="btn btn-sm {{ !$moduleType ? 'btn-primary' : 'btn-light border' }} rounded-pill px-3 fw-semibold">
         Tüm SSS'ler

@@ -1,7 +1,7 @@
-/* ============================================================
-   İPEK MÜHENDİSLİK — ANIMATIONS.JS
-   IntersectionObserver-based scroll reveals & counter animation
-   ============================================================ */
+/*!
+ * İpek Harita Mühendislik Sistemleri
+ * Developed by Kuzeyoku Software
+ */
 
 'use strict';
 
@@ -12,14 +12,10 @@ const IpekAnimations = {
         this.counterAnimation();
     },
 
-    /**
-     * Scroll Reveal — Triggers [data-reveal] elements when in viewport
-     */
     scrollReveal() {
         const elements = document.querySelectorAll('[data-reveal]');
         if (!elements.length) return;
 
-        // Respect prefers-reduced-motion
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
             elements.forEach(el => el.classList.add('revealed'));
             return;
@@ -40,9 +36,6 @@ const IpekAnimations = {
         elements.forEach(el => observer.observe(el));
     },
 
-    /**
-     * Counter-up animation for stat numbers
-     */
     counterAnimation() {
         const counters = document.querySelectorAll('[data-counter]');
         if (!counters.length) return;
@@ -52,7 +45,6 @@ const IpekAnimations = {
             const duration = 2200;
             const startTime = performance.now();
 
-            // Easing function (ease-out-quart)
             const easeOutQuart = (t) => 1 - Math.pow(1 - t, 4);
 
             const update = (currentTime) => {

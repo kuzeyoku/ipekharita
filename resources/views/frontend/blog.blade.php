@@ -4,7 +4,6 @@
 
 @section('content')
 
-<!-- Header Banner -->
 <section class="subpage-header-banner">
     <div class="container text-center">
         <nav class="breadcrumb-enterprise mb-3" aria-label="breadcrumb">
@@ -17,11 +16,9 @@
     </div>
 </section>
 
-<!-- Blog Posts Section -->
 <div class="py-5 mb-5">
     <div class="container">
 
-        <!-- Category Filter Tabs -->
         @if(isset($categories) && count($categories) > 0)
             <div class="d-flex flex-wrap align-items-center justify-content-center gap-2 mb-5">
                 <a href="{{ route('blog') }}" class="btn btn-sm {{ !$selectedCatSlug ? 'btn-primary shadow-sm' : 'btn-outline-secondary' }} rounded-pill px-4 py-2 fw-semibold d-inline-flex align-items-center gap-1">

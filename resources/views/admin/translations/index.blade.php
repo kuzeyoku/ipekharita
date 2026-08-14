@@ -49,7 +49,6 @@
             </div>
         </div>
 
-        {{-- Translation Files Navigation --}}
         <div class="pt-3">
             <span class="text-muted small fw-semibold text-uppercase d-block mb-2">
                 <i class="fa-solid fa-folder-open text-warning me-1"></i> Modül / Dil Dosyası Seçimi ({{ strtoupper($selectedLocale) }})
@@ -67,7 +66,6 @@
     </div>
 </div>
 
-{{-- Main Translation Editor Card --}}
 <div class="admin-card-glass">
     <div class="admin-card-body-light">
         <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 pb-3 mb-4 border-bottom">
@@ -82,13 +80,12 @@
             </div>
 
             <div class="d-flex gap-2 align-items-center">
-                {{-- Quick Filter Input --}}
+                
                 <div class="input-group input-group-sm" style="max-width: 260px;">
                     <span class="input-group-text bg-light border-end-0"><i class="fa-solid fa-magnifying-glass text-muted"></i></span>
                     <input type="text" id="translationSearch" class="form-control border-start-0" placeholder="Anahtar veya metin ara...">
                 </div>
 
-                {{-- Add Key Button --}}
                 <button type="button" class="btn btn-sm btn-outline-success rounded-pill px-3" data-bs-toggle="modal" data-bs-target="#addKeyModal">
                     <i class="fa-solid fa-plus me-1"></i> Yeni Anahtar
                 </button>
@@ -129,7 +126,6 @@
                                     </div>
                                 </div>
 
-                                {{-- If editing non-TR locale: Show Turkish reference --}}
                                 @if($selectedLocale !== 'tr' && isset($baseTranslations[$key]))
                                     <div class="mb-2 p-2 bg-white border border-light-subtle rounded small">
                                         <span class="text-muted fw-semibold d-block" style="font-size: 0.72rem;">
@@ -139,7 +135,6 @@
                                     </div>
                                 @endif
 
-                                {{-- Smart input: Textarea for longer texts, text input for single line --}}
                                 @if(strlen($value) > 75 || str_contains($key, 'desc') || str_contains($key, 'content') || str_contains($key, 'summary') || str_contains($key, 'history') || str_contains($key, 'subtitle'))
                                     <textarea name="keys[{{ $key }}]" rows="3" class="form-control admin-input-light font-sans" required>{{ $value }}</textarea>
                                 @else
@@ -164,7 +159,6 @@
     </div>
 </div>
 
-{{-- Modal: Add New Translation Key --}}
 <div class="modal fade" id="addKeyModal" tabindex="-1" aria-labelledby="addKeyModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content border-0 shadow">
@@ -209,7 +203,6 @@
     </div>
 </div>
 
-{{-- Modal: Add New Language --}}
 <div class="modal fade" id="addLanguageModal" tabindex="-1" aria-labelledby="addLanguageModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content border-0 shadow">
@@ -242,7 +235,6 @@
     </div>
 </div>
 
-{{-- Hidden Form for Delete Key --}}
 <form id="deleteKeyForm" action="{{ route('admin.translations.delete-key') }}" method="POST" style="display: none;">
     @csrf
     <input type="hidden" name="locale" value="{{ $selectedLocale }}">
@@ -250,7 +242,6 @@
     <input type="hidden" name="key" id="deleteKeyInput">
 </form>
 
-{{-- Hidden Form for Delete Language --}}
 <form id="deleteLanguageForm" action="{{ route('admin.translations.delete-language') }}" method="POST" style="display: none;">
     @csrf
     <input type="hidden" name="locale" id="deleteLanguageInput">

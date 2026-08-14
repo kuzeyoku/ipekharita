@@ -1,11 +1,10 @@
+/*!
+ * İpek Harita Mühendislik Sistemleri
+ * Developed by Kuzeyoku Software
+ */
+
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@400;500;600;700;800&family=Lexend:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap');
 
-/* ============================================================
-   İPEK MÜHENDİSLİK — LIGHT ENTERPRISE COMPONENTS & AGENCY BADGES
-   Sleek Compact Header Navigation & Pixel-Perfect Uniform Scale
-   ============================================================ */
-
-/* Global SVG Vector Icon Sizing Rule */
 svg, .svg-icon-vector {
     width: 1em;
     height: 1em;
@@ -15,7 +14,6 @@ svg, .svg-icon-vector {
     flex-shrink: 0;
 }
 
-/* ── Topbar (Compact & Sleek) ────────────────────────────── */
 .topbar-enterprise {
     background: var(--primary);
     color: rgba(255, 255, 255, 0.85);
@@ -32,7 +30,6 @@ svg, .svg-icon-vector {
     color: #38BDF8;
 }
 
-/* ── Fixed Position Enterprise Header System ─────────────────── */
 .site-header-fixed {
     position: fixed;
     top: 0;
@@ -124,7 +121,6 @@ body {
     text-transform: uppercase;
 }
 
-/* Nav links (Compact Sleek Scale with Icons) */
 .nav-link-enterprise {
     display: inline-flex;
     align-items: center;
@@ -156,7 +152,6 @@ body {
     color: var(--accent-blue);
 }
 
-/* ── Rich Enterprise Nav Dropdown Menu ─────────────────── */
 .dropdown-menu-enterprise {
     background-color: #FFFFFF !important;
     border: 1px solid var(--border-light) !important;
@@ -195,7 +190,6 @@ body {
     transform: scale(1.15);
 }
 
-/* Hover and Bootstrap .show trigger for nav dropdown */
 .nav-item.dropdown:hover > .dropdown-menu-enterprise,
 .dropdown-menu-enterprise.show {
     display: block !important;
@@ -215,7 +209,6 @@ body {
     }
 }
 
-/* Buttons */
 .btn-enterprise {
     display: inline-flex;
     align-items: center;
@@ -263,7 +256,6 @@ body {
     box-shadow: var(--shadow-md);
 }
 
-/* Premium Enterprise Detail Button & Card Link */
 .btn-detail-enterprise {
     display: inline-flex;
     align-items: center;
@@ -296,7 +288,6 @@ body {
     transform: translateX(4px);
 }
 
-/* ── Public Agency Compliance Badges ──────────────────────── */
 .agency-tag {
     display: inline-flex;
     align-items: center;
@@ -317,7 +308,6 @@ body {
 .agency-tag-nvi { background: rgba(124, 58, 237, 0.1); color: #6D28D9; border: 1px solid rgba(124, 58, 237, 0.25); }
 .agency-tag-mapeg { background: rgba(225, 29, 72, 0.1); color: #BE123C; border: 1px solid rgba(225, 29, 72, 0.25); }
 
-/* ── Light Bento Grid Architecture ───────────────────────── */
 .bento-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -372,11 +362,6 @@ body {
     box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
 }
 
-/* ============================================================
-   ENTERPRISE SUBPAGE HEADER & BREADCRUMB BANNER SYSTEM
-   Modern, crisp, scalable architectural design system
-   ============================================================ */
-
 .subpage-header-banner {
     position: relative;
     padding: 56px 0 48px;
@@ -396,7 +381,6 @@ body {
     z-index: 2;
 }
 
-/* Glassmorphism Breadcrumb Capsule Styling */
 .breadcrumb-enterprise {
     display: inline-flex;
     align-items: center;
@@ -449,7 +433,6 @@ body {
     color: var(--text-primary);
 }
 
-/* Custom Varied Section Backgrounds for Home Page & Portals */
 .bg-section-slate {
     background: #F8FAFC;
     border-top: 1px solid var(--border-light);
@@ -518,7 +501,6 @@ body {
     z-index: 2;
 }
 
-/* Project Card Vector Image Container */
 .project-img-wrapper {
     height: 210px;
     background: #FFFFFF;
@@ -541,7 +523,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Call to Action Enterprise Glow */
 .cta-enterprise {
     background-color: #0F172A !important;
     background-image: linear-gradient(135deg, #0F172A 0%, #1E3A8A 100%) !important;
@@ -602,7 +583,6 @@ body {
     letter-spacing: -0.025em;
 }
 
-/* Big Scale Track Record Box */
 .stat-box-large {
     background: #FFFFFF;
     border: 1px solid var(--border-light);
@@ -626,7 +606,6 @@ body {
     color: var(--text-secondary);
 }
 
-/* Footer Ultra-Premium Dark Enterprise with Multi-Layered Vector City Skyline (Referans Görsel Tarzı) */
 .footer-enterprise {
     background-color: #070D1B;
     background-image: radial-gradient(circle at 50% 0%, rgba(30, 58, 138, 0.35) 0%, transparent 75%),
@@ -655,7 +634,6 @@ body {
     z-index: 1;
 }
 
-/* Backup CAD Pattern Footer (Easy Revert) */
 .footer-cad-backup {
     background-image: radial-gradient(circle at 15% 30%, rgba(14, 165, 233, 0.12) 0%, transparent 60%),
                       radial-gradient(circle at 85% 70%, rgba(37, 99, 235, 0.15) 0%, transparent 65%),
@@ -697,7 +675,6 @@ body {
     font-weight: 400;
 }
 
-/* Footer Link Styling & Icon Spacing */
 .footer-tech-links {
     display: flex;
     flex-direction: column;
@@ -739,7 +716,6 @@ body {
     transform: translateX(3px);
 }
 
-/* Contact Info Item Spacing & Contrast */
 .footer-contact-list {
     display: flex;
     flex-direction: column;
@@ -767,7 +743,6 @@ body {
     flex-shrink: 0;
 }
 
-/* Social Buttons */
 .footer-social-btn {
     width: 40px;
     height: 40px;
@@ -790,11 +765,6 @@ body {
     box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
 }
 
-/* ============================================================
-   NEW ENTERPRISE UI MODULES & COMPONENTS
-   ============================================================ */
-
-/* 1. Global Scroll Progress Indicator */
 #scroll-progress {
     position: fixed;
     top: 0;
@@ -806,7 +776,6 @@ body {
     transition: width 0.1s linear;
 }
 
-/* 2. Floating Back to Top Capsule */
 #back-to-top {
     position: fixed;
     bottom: 28px;
@@ -846,7 +815,6 @@ body {
     box-shadow: 0 10px 28px rgba(37, 99, 235, 0.45);
 }
 
-/* 3. Glassmorphism Metric Stats Cards */
 .stat-card-enterprise {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(12px);
@@ -908,7 +876,6 @@ body {
     margin: 0;
 }
 
-/* 4. Technical Engineering FAQ Accordion */
 .accordion-enterprise {
     display: flex;
     flex-direction: column;
@@ -982,7 +949,6 @@ body {
     padding: 0 26px 24px 26px;
 }
 
-/* 5. Project Filter Pills & Tech Badges */
 .filter-pills-container {
     display: flex;
     justify-content: center;
@@ -1033,7 +999,6 @@ body {
     letter-spacing: 0.03em;
 }
 
-/* 6. Service Selection Chips & Enterprise Form Controls */
 .chip-select-container {
     display: flex;
     flex-wrap: wrap;
@@ -1083,11 +1048,6 @@ body {
     outline: none;
 }
 
-/* ============================================================
-   ULTRA-PREMIUM ENTERPRISE MODULES
-   ============================================================ */
-
-/* 1. Live Operation Pulse Badges */
 .badge-pulse-green,
 .badge-pulse-blue,
 .badge-pulse-dark {
@@ -1176,7 +1136,6 @@ body {
     }
 }
 
-/* 2. Interactive 22/a Kadastro Before / After Comparison Slider */
 .compare-slider-wrapper {
     position: relative;
     width: 100%;
@@ -1201,7 +1160,7 @@ body {
 
 .compare-before {
     z-index: 1;
-    /* Legacy distorted pafta theme background */
+    
     background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
 }
 
@@ -1211,7 +1170,7 @@ body {
     overflow: hidden;
     border-right: 2px solid #38BDF8;
     box-shadow: 4px 0 25px rgba(56, 189, 248, 0.5);
-    /* Modern 22/a GIS vector cadastre theme background */
+    
     background: linear-gradient(135deg, #090D16 0%, #0F172A 100%);
 }
 
@@ -1293,7 +1252,6 @@ body {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* 3. Interactive Equipment Showcase Cards */
 .equip-card-enterprise {
     background: #FFFFFF;
     border: 1px solid rgba(226, 232, 240, 0.9);
@@ -1330,11 +1288,6 @@ body {
     transform: scale(1.05);
 }
 
-/* ============================================================
-   3 TIER-1 ENTERPRISE REPLACEMENT MODULES
-   ============================================================ */
-
-/* 1. 4-Step Enterprise Workflow Timeline */
 .workflow-step-card {
     background: #FFFFFF;
     border: 1px solid rgba(226, 232, 240, 0.9);
@@ -1373,7 +1326,6 @@ body {
     box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
 }
 
-/* 2. Canlı İHA Telemetri & GIS Komuta Merkezi Dashboard */
 .telemetry-dashboard-card {
     background: linear-gradient(145deg, #0F172A 0%, #1E293B 100%);
     border: 1px solid rgba(56, 189, 248, 0.25);
@@ -1404,7 +1356,6 @@ body {
     transform: translateY(-3px);
 }
 
-/* 3. Resmi Kamu Mevzuat Uyum & Standartlar Matrisi */
 .standards-matrix-card {
     background: #FFFFFF;
     border: 1px solid rgba(226, 232, 240, 0.9);

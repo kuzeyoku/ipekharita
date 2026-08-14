@@ -1,7 +1,7 @@
-/* ============================================================
-   İPEK MÜHENDİSLİK — MAIN.JS
-   Enterprise UI Components: Accordions, Filters, Scroll Progress, Counters, Compare Slider, Cursor Spotlight
-   ============================================================ */
+/*!
+ * İpek Harita Mühendislik Sistemleri
+ * Developed by Kuzeyoku Software
+ */
 
 'use strict';
 
@@ -21,9 +21,6 @@ const IpekApp = {
         this.activeNavLink();
     },
 
-    /**
-     * Enterprise Fixed Header System Scroll Handler
-     */
     initStickyHeader() {
         const header = document.querySelector('.site-header-fixed') || document.querySelector('.navbar-floating-container');
         if (!header) return;
@@ -40,9 +37,6 @@ const IpekApp = {
         handleScroll();
     },
 
-    /**
-     * Smooth scroll for anchor links
-     */
     smoothScroll() {
         document.querySelectorAll('a[href^="#"]').forEach(link => {
             link.addEventListener('click', (e) => {
@@ -64,9 +58,6 @@ const IpekApp = {
         });
     },
 
-    /**
-     * Global Scroll Progress Indicator
-     */
     initScrollProgress() {
         let progressBar = document.getElementById('scroll-progress');
         if (!progressBar) {
@@ -83,9 +74,6 @@ const IpekApp = {
         }, { passive: true });
     },
 
-    /**
-     * Floating Back to Top Capsule Button
-     */
     initBackToTop() {
         let btn = document.getElementById('back-to-top');
         if (!btn) {
@@ -109,9 +97,6 @@ const IpekApp = {
         });
     },
 
-    /**
-     * Engineering Technical FAQ Accordions
-     */
     initAccordions() {
         document.querySelectorAll('.accordion-header-enterprise').forEach(header => {
             header.addEventListener('click', () => {
@@ -119,7 +104,6 @@ const IpekApp = {
                 const body = item.querySelector('.accordion-body-enterprise');
                 const isOpen = item.classList.contains('active');
 
-                // Close siblings if in same accordion container
                 const container = item.closest('.accordion-enterprise');
                 if (container) {
                     container.querySelectorAll('.accordion-item-enterprise').forEach(sibling => {
@@ -139,9 +123,6 @@ const IpekApp = {
         });
     },
 
-    /**
-     * Project Category Filter Pills
-     */
     initFilterPills() {
         const pills = document.querySelectorAll('.filter-pill-enterprise');
         const cards = document.querySelectorAll('[data-category]');
@@ -173,9 +154,6 @@ const IpekApp = {
         });
     },
 
-    /**
-     * Service Selection Chips for Contact/RFP Forms
-     */
     initChipSelectors() {
         document.querySelectorAll('.chip-select-enterprise').forEach(chip => {
             chip.addEventListener('click', () => {
@@ -184,9 +162,6 @@ const IpekApp = {
         });
     },
 
-    /**
-     * Number Counter Animation when scrolled into view
-     */
     initCounters() {
         const counters = document.querySelectorAll('.stat-card-number[data-count]');
         if (counters.length === 0) return;
@@ -218,9 +193,6 @@ const IpekApp = {
         counters.forEach(c => observer.observe(c));
     },
 
-    /**
-     * 22/a Kadastro Before / After Comparison Slider Logic
-     */
     initCompareSlider() {
         const wrappers = document.querySelectorAll('.compare-slider-wrapper');
         wrappers.forEach(wrapper => {
@@ -266,9 +238,6 @@ const IpekApp = {
         });
     },
 
-    /**
-     * Ambient Cursor Spotlight Tracking Effect on Dark Containers
-     */
     initCursorSpotlight() {
         const darkContainers = document.querySelectorAll('.hero-enterprise, .cta-enterprise');
         darkContainers.forEach(container => {
@@ -282,9 +251,6 @@ const IpekApp = {
         });
     },
 
-    /**
-     * Highlight active nav link
-     */
     activeNavLink() {
         const currentPath = window.location.pathname.split('/').pop() || 'index.html';
         document.querySelectorAll('.navbar-nav .nav-link-enterprise').forEach(link => {
@@ -295,9 +261,6 @@ const IpekApp = {
         });
     },
 
-    /**
-     * Form Submission Loading State & Duplicate Prevention
-     */
     initFormSubmitLoading() {
         document.querySelectorAll('form').forEach(form => {
             form.addEventListener('submit', (e) => {
@@ -310,7 +273,6 @@ const IpekApp = {
                     submitBtn.classList.add('btn-loading');
                     submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> ' + (submitBtn.innerText || 'Gönderiliyor...');
                     
-                    // Fallback timeout to restore if form submission fails without page unload
                     setTimeout(() => {
                         submitBtn.classList.remove('btn-loading');
                         submitBtn.innerHTML = originalHtml;
@@ -321,6 +283,4 @@ const IpekApp = {
     }
 };
 
-// Boot
 document.addEventListener('DOMContentLoaded', () => IpekApp.init());
-

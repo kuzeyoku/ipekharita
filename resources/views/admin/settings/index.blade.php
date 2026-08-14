@@ -13,7 +13,7 @@
 
 <div class="admin-card-glass">
     <div class="admin-card-body-light">
-        <!-- Navigation Tabs -->
+        
         <ul class="nav nav-pills custom-admin-tabs mb-4 gap-2 border-bottom pb-3" id="settingsTab" role="tablist">
             <li class="nav-item" role="presentation">
                 <button class="nav-link active fw-bold rounded-pill" id="general-tab" data-bs-toggle="tab" data-bs-target="#general" type="button" role="tab">
@@ -48,7 +48,7 @@
         </ul>
 
         <div class="tab-content" id="settingsTabContent">
-            <!-- 1. Genel Tab -->
+            
             <div class="tab-pane fade show active" id="general" role="tabpanel">
                 <form action="{{ route('admin.settings.update') }}" method="POST">
                     @csrf
@@ -81,7 +81,6 @@
                 </form>
             </div>
 
-            <!-- 2. İletişim Tab -->
             <div class="tab-pane fade" id="contact" role="tabpanel">
                 <form action="{{ route('admin.settings.update') }}" method="POST">
                     @csrf
@@ -120,7 +119,6 @@
                 </form>
             </div>
 
-            <!-- 3. Sosyal Medya Tab -->
             <div class="tab-pane fade" id="social" role="tabpanel">
                 <form action="{{ route('admin.settings.update') }}" method="POST">
                     @csrf
@@ -151,7 +149,6 @@
                 </form>
             </div>
 
-            <!-- 4. SMTP Tab -->
             <div class="tab-pane fade" id="smtp" role="tabpanel">
                 <form action="{{ route('admin.settings.update') }}" method="POST">
                     @csrf
@@ -182,7 +179,6 @@
                 </form>
             </div>
 
-            <!-- 5. reCAPTCHA Tab -->
             <div class="tab-pane fade" id="recaptcha" role="tabpanel">
                 <form action="{{ route('admin.settings.update') }}" method="POST">
                     @csrf
@@ -215,7 +211,6 @@
                 </form>
             </div>
 
-            <!-- 6. Sunucu & Paylaşımlı Hosting Araçları Tab -->
             <div class="tab-pane fade" id="system" role="tabpanel">
                 <h6 class="fw-bold text-danger mb-3"><i class="fa-solid fa-microchip me-1"></i> Sunucu Durumu & Sürüm Teşhis Araçları</h6>
                 

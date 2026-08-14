@@ -4,7 +4,6 @@
 
 @section('content')
 
-<!-- Header Banner -->
 <section class="subpage-header-banner">
     <div class="container text-center">
         <nav class="breadcrumb-enterprise mb-3" aria-label="breadcrumb">
@@ -17,7 +16,6 @@
     </div>
 </section>
 
-<!-- Contact Content -->
 <div class="py-5 mb-5">
     <div class="container">
         <div class="row g-4 mb-5">
@@ -53,7 +51,7 @@
         </div>
 
         <div class="row g-5">
-            <!-- Form -->
+            
             <div class="col-lg-6" data-reveal="left">
                 <div class="card-enterprise p-4 p-md-5">
                     <h3 class="mb-2 text-dark font-heading">{{ __('contact.form_title') }}</h3>
@@ -78,7 +76,7 @@
 
                     <form action="{{ route('contact.submit') }}" method="POST">
                         @csrf
-                        <!-- Invisible Honeypot field for bot spam prevention -->
+                        
                         <div style="display:none !important;" aria-hidden="true">
                             <input type="text" name="website" tabindex="-1" autocomplete="off">
                         </div>
@@ -123,7 +121,6 @@
                 </div>
             </div>
 
-            <!-- Google Map -->
             <div class="col-lg-6" data-reveal="right">
                 <div class="card-enterprise p-2 h-100 min-vh-400 overflow-hidden">
                     <iframe title="Map Location" src="{{ setting('map_iframe', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d195884.30043003058!2d32.62268393529367!3d39.90355567554904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d347d520732db1%3A0xbdc57b0c0842b8d!2sAnkara!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str') }}" width="100%" height="100%" style="border:0; min-height:450px;" allowfullscreen="" loading="lazy"></iframe>

@@ -1,10 +1,9 @@
-/**
- * Enterprise SaaS Admin Panel Modular JavaScript
- * İpek Mühendislik A.Ş.
+/*!
+ * İpek Harita Mühendislik Sistemleri
+ * Developed by Kuzeyoku Software
  */
 
 $(document).ready(function () {
-    // 1. Initialize Dropify Drag & Drop Uploads with WebP support
     if ($.fn.dropify) {
         var drEvents = $('.dropify').dropify({
             imgFileExtensions: ['png', 'jpg', 'jpeg', 'gif', 'bmp', 'webp'],
@@ -16,7 +15,6 @@ $(document).ready(function () {
             }
         });
 
-        // Handle Dropify "Kaldır" (afterClear) event to set hidden remove_image input
         drEvents.on('dropify.afterClear', function (event, element) {
             var form = $(this).closest('form');
             if (form.find('input[name="remove_image"]').length === 0) {
@@ -27,7 +25,6 @@ $(document).ready(function () {
         });
     }
 
-    // 2. Initialize TinyMCE Rich Text Editor
     if (typeof tinymce !== 'undefined' && document.querySelector('.tinymce-editor')) {
         var csrfTokenMeta = document.querySelector('meta[name="csrf-token"]');
         var csrfToken = csrfTokenMeta ? csrfTokenMeta.getAttribute('content') : '';
@@ -93,7 +90,6 @@ $(document).ready(function () {
         });
     }
 
-    // 3. Ctrl + K Command Palette Keyboard Listener
     document.addEventListener('keydown', function (e) {
         if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
             e.preventDefault();
@@ -105,7 +101,6 @@ $(document).ready(function () {
         }
     });
 
-    // 4. SweetAlert2 Toast Notifications
     if (typeof Swal !== 'undefined') {
         const Toast = Swal.mixin({
             toast: true,
@@ -136,7 +131,6 @@ $(document).ready(function () {
             });
         }
 
-        // 5. SweetAlert2 Confirmation Dialog for forms with data-confirm attribute
         document.addEventListener('submit', function (e) {
             var form = e.target;
             var confirmMsg = form.getAttribute('data-confirm');
@@ -161,7 +155,6 @@ $(document).ready(function () {
         });
     }
 
-    // 6. Chart.js Analytics Chart Initialization
     var chartEl = document.getElementById('analyticsChart');
     if (chartEl && typeof Chart !== 'undefined') {
         var ctx = chartEl.getContext('2d');
@@ -234,7 +227,6 @@ $(document).ready(function () {
         });
     }
 
-    // 7. Password Visibility Toggle Listener
     var togglePassBtn = document.getElementById('togglePasswordBtn');
     if (togglePassBtn) {
         togglePassBtn.addEventListener('click', function () {
@@ -252,7 +244,6 @@ $(document).ready(function () {
         });
     }
 
-    // 8. Google reCAPTCHA v3 Form Submit Token Generator
     var loginForm = document.getElementById('adminLoginForm');
     if (loginForm) {
         loginForm.addEventListener('submit', function (e) {
@@ -272,7 +263,6 @@ $(document).ready(function () {
             }
         });
     }
-    // 9. Client-side Live Table Filter
     $(document).on('keyup', '.table-search-input', function () {
         var query = $(this).val().toLowerCase();
         var table = $(this).closest('.admin-card-light, .admin-card-glass, .card').find('table tbody tr');

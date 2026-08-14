@@ -1,54 +1,48 @@
-/* ============================================================
-   İPEK MÜHENDİSLİK — LIGHT ENTERPRISE DESIGN SYSTEM
-   Fixed 1320px Container & Locked Typography Scale Across All Pages
-   ============================================================ */
+/*!
+ * İpek Harita Mühendislik Sistemleri
+ * Developed by Kuzeyoku Software
+ */
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Lexend:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap');
 
 :root {
-    /* Premium Corporate Light Palette */
-    --primary:          #0F172A; /* Deep Navy */
+    
+    --primary:          #0F172A; 
     --primary-rgb:      15, 23, 42;
-    --primary-blue:     #1E3A8A; /* Royal Corporate Blue */
+    --primary-blue:     #1E3A8A; 
     --primary-blue-rgb: 30, 58, 138;
     
-    --accent-blue:      #2563EB; /* Active Vibrant Blue */
+    --accent-blue:      #2563EB; 
     --accent-blue-rgb:  37, 99, 235;
 
-    --accent-cyan:      #0284C7; /* Sky Blue */
-    --accent-gold:      #D97706; /* Amber Corporate Gold */
+    --accent-cyan:      #0284C7; 
+    --accent-gold:      #D97706; 
     --accent-gold-rgb:  217, 119, 6;
 
-    /* Bright Backgrounds */
     --bg-body:          #FFFFFF;
     --bg-surface-light: #F8FAFC;
     --bg-surface-alt:   #F1F5F9;
     --bg-card:          #FFFFFF;
 
-    /* Text Colors */
     --text-primary:     #0F172A;
     --text-secondary:   #475569;
     --text-muted:       #64748B;
     --text-light:       #94A3B8;
 
-    /* Borders & Dividers */
     --border-light:     #E2E8F0;
     --border-subtle:    #F1F5F9;
     --border-accent:    rgba(37, 99, 235, 0.2);
 
-    /* Fonts */
     --font-heading:     'Lexend', sans-serif;
     --font-body:        'Plus Jakarta Sans', sans-serif;
     --font-mono:        'Fira Code', monospace;
 
-    /* Radii */
     --radius-sm:        8px;
     --radius-md:        14px;
     --radius-lg:        20px;
     --radius-xl:        28px;
     --radius-pill:      100px;
 
-    /* Elevation & Shadows */
     --shadow-sm:        0 2px 8px rgba(15, 23, 42, 0.04);
     --shadow-md:        0 8px 24px rgba(15, 23, 42, 0.06);
     --shadow-lg:        0 16px 40px rgba(15, 23, 42, 0.08);
@@ -72,13 +66,12 @@ body {
     font-family: var(--font-body);
     background-color: var(--bg-body);
     color: var(--text-primary);
-    font-size: 1.05rem; /* 17px base */
+    font-size: 1.05rem; 
     line-height: 1.65;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
 }
 
-/* Force exact same 1320px container width across all desktop viewports */
 @media (min-width: 1200px) {
     .container, 
     .container-lg, 
@@ -90,7 +83,6 @@ body {
     }
 }
 
-/* Typography Uniform Scale */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     color: var(--primary);
@@ -107,7 +99,6 @@ h5 { font-size: 1.15rem; }
 p { color: var(--text-secondary); font-size: 1.05rem; }
 p.lead, .lead { font-size: 1.18rem !important; font-weight: 400; line-height: 1.65 !important; }
 
-/* Text Gradients */
 .text-gradient-blue {
     background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 50%, #0284C7 100%);
     -webkit-background-clip: text;
@@ -120,7 +111,6 @@ p.lead, .lead { font-size: 1.18rem !important; font-weight: 400; line-height: 1.
     -webkit-text-fill-color: transparent;
 }
 
-/* Enterprise Badge */
 .corporate-badge {
     display: inline-flex;
     align-items: center;
@@ -150,7 +140,6 @@ p.lead, .lead { font-size: 1.18rem !important; font-weight: 400; line-height: 1.
     50% { transform: scale(1.4); opacity: 0.4; }
 }
 
-/* Card Base */
 .card-enterprise {
     background: #FFFFFF;
     border: 1px solid var(--border-light);
@@ -167,7 +156,6 @@ p.lead, .lead { font-size: 1.18rem !important; font-weight: 400; line-height: 1.
     transform: translateY(-5px);
 }
 
-/* Header & Footer Brand Logos */
 .header-brand-logo {
     height: 70px;
     max-width: 200px;
@@ -180,9 +168,6 @@ p.lead, .lead { font-size: 1.18rem !important; font-weight: 400; line-height: 1.
     object-fit: contain;
 }
 
-/* ============================================================
-   WCAG 2.2 AA Accessibility Focus States & Micro-interactions
-   ============================================================ */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -192,7 +177,6 @@ textarea:focus-visible {
     outline-offset: 2px !important;
 }
 
-/* Form Submit Loading Spinner */
 .btn-enterprise.btn-loading,
 button[type="submit"].btn-loading {
     position: relative;
@@ -200,5 +184,3 @@ button[type="submit"].btn-loading {
     opacity: 0.85;
     cursor: wait !important;
 }
-
-

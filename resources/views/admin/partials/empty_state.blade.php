@@ -1,14 +1,3 @@
-{{--
-    Admin Empty State Partial
-    Usage:
-    @include('admin.partials.empty_state', [
-        'icon' => 'fa-folder-open',
-        'title' => 'Henüz Kayıt Bulunmuyor',
-        'message' => 'Sistemde henüz kayıtlı veri yok.',
-        'createUrl' => route('admin.users.create'),
-        'createTitle' => 'İlk Kaydı Ekle'
-    ])
---}}
 <div class="text-center py-5 my-3">
     <div class="stat-icon-square icon-blue-gradient mx-auto mb-3 opacity-75 d-flex align-items-center justify-content-center" style="width: 64px; height: 64px; font-size: 1.75rem; border-radius: 18px;">
         <i class="fa-solid {{ $icon ?? 'fa-inbox' }}"></i>

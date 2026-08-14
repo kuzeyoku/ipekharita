@@ -4,7 +4,6 @@
 
 @section('content')
 
-<!-- Header Banner -->
 <section class="subpage-header-banner">
     <div class="container text-center">
         <nav class="breadcrumb-enterprise mb-3" aria-label="breadcrumb">
@@ -17,13 +16,12 @@
     </div>
 </section>
 
-<!-- Bento Grid Services -->
 <div class="py-5 mb-5">
     <div class="container">
         <div class="bento-grid">
             @foreach($services as $service)
                 @if($loop->first)
-                    <!-- Service 1: Hero Featured Bento -->
+                    
                     <div class="bento-col-8" data-reveal="up">
                         <div class="bento-card-light bento-card-hero-light h-100 d-flex flex-column justify-content-between">
                             <div>
@@ -46,7 +44,7 @@
                         </div>
                     </div>
                 @else
-                    <!-- Standard Service Bento -->
+                    
                     <div class="bento-col-4" data-reveal="up" data-delay="{{ $loop->iteration * 100 }}">
                         <div class="bento-card-light h-100 d-flex flex-column justify-content-between">
                             <div>
@@ -67,7 +65,6 @@
         </div>
     </div>
 
-    <!-- ── TEKNİK SSS & İHALE REHBERİ ──────────────────────────── -->
     @if(isset($faqs) && count($faqs) > 0)
     <section class="py-5 mb-0 bg-section-slate border-top mt-5">
         <div class="container max-w-900 mx-auto">

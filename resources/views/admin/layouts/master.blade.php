@@ -8,25 +8,18 @@
     <title>@yield('title', 'Yönetim Paneli') | {{ setting('brand_name', setting('company_name', config('app.name', 'Yönetim Paneli'))) }}</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/hero/icon.png') }}">
 
-    <!-- Bootstrap 5 CSS -->
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
 
-    <!-- SweetAlert2 CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/sweetalert2.min.css') }}">
 
-    <!-- Dropify CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/dropify.min.css') }}">
 
-    <!-- Chart.js -->
     <script src="{{ asset('assets/js/chart.min.js') }}"></script>
 
-    <!-- TinyMCE -->
     <script src="{{ asset('assets/js/tinymce.min.js') }}"></script>
 
-    <!-- Local FontAwesome 6 CSS (0 KB CDN Dependency) -->
     <link rel="stylesheet" href="{{ asset('assets/fontawesome/css/all.min.css') }}">
 
-    <!-- Light Enterprise Admin CSS -->
     <link rel="stylesheet" href="{{ asset('admin-assets/css/admin.css') }}">
     @stack('styles')
 </head>
@@ -34,8 +27,6 @@
 <body class="admin-body-light" data-editor-upload-url="{{ route('admin.editor-upload') }}"
     data-toast-success="{{ session('success') }}" data-toast-error="{{ session('error') }}">
 
-    <!-- Sidebar Ultra -->
-    <!-- Sidebar Ultra -->
     <aside class="admin-sidebar-light">
         <a href="{{ route('admin.dashboard') }}" class="admin-sidebar-brand">
             <div class="sidebar-brand-icon">
@@ -48,7 +39,7 @@
         </a>
 
         <div class="admin-sidebar-scroll py-2">
-            <!-- 1. GENEL -->
+            
             <div class="admin-nav-section-title">Genel</div>
             <div class="admin-nav-item">
                 <a href="{{ route('admin.dashboard') }}"
@@ -57,7 +48,6 @@
                 </a>
             </div>
 
-            <!-- 2. İÇERİK YÖNETİMİ -->
             <div class="admin-nav-section-title">İçerik Yönetimi</div>
             <div class="admin-nav-item">
                 <a href="{{ route('admin.services.index') }}"
@@ -96,7 +86,6 @@
                 </a>
             </div>
 
-            <!-- 3. ETKİLEŞİM & CRM -->
             <div class="admin-nav-section-title">Etkileşim & CRM</div>
             <div class="admin-nav-item">
                 <a href="{{ route('admin.messages.index') }}"
@@ -129,7 +118,6 @@
                 </a>
             </div>
 
-            <!-- 4. SİSTEM & AYARLAR -->
             <div class="admin-nav-section-title">Sistem & Yapılandırma</div>
             <div class="admin-nav-item">
                 <a href="{{ route('admin.menus.index') }}"
@@ -157,7 +145,6 @@
             </div>
         </div>
 
-        <!-- Live System Pulse Status -->
         <div class="px-3 py-2 mx-3 mb-2 rounded-3 bg-light border d-flex align-items-center justify-content-between small">
             <span class="d-flex align-items-center gap-2 text-dark font-monospace fw-semibold" style="font-size: 0.75rem;">
                 <span class="pulse-indicator"></span> Sistem Aktif
@@ -179,13 +166,11 @@
         </div>
     </aside>
 
-    <!-- Header Light Ultra -->
     <header class="admin-header-light">
         <div class="d-flex align-items-center gap-3">
             <h6 class="mb-0 fw-extrabold text-dark" style="font-family: 'Outfit', sans-serif; font-size: 0.95rem;">
                 @yield('title', 'Yönetim Paneli')</h6>
 
-            <!-- Quick Command Palette Button -->
             <div class="search-command-btn" data-bs-toggle="modal" data-bs-target="#commandPaletteModal">
                 {!! render_svg_icon('magnifying-glass', 'text-primary') !!}
                 <span>Hızlı Menü Ara...</span>
@@ -207,12 +192,10 @@
         </div>
     </header>
 
-    <!-- Main Content Light -->
     <main class="admin-main-light">
         @yield('content')
     </main>
 
-    <!-- Command Palette Modal (Ctrl + K) -->
     <div class="modal fade" id="commandPaletteModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content rounded-4 border-0 shadow-lg p-2">
@@ -289,7 +272,6 @@
         </div>
     </div>
 
-    <!-- jQuery, Bootstrap 5, SweetAlert2, Dropify & Enterprise Admin JS -->
     <script src="{{ asset('assets/js/jquery-3.7.1.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/sweetalert2.all.min.js') }}"></script>

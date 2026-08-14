@@ -22,9 +22,9 @@
 <body class="login-body-light">
 
     <div class="login-wrapper-split">
-        <!-- Left Side: Interactive Dynamic Hero with Mouse-Tracking TIN Triangulated Mesh -->
+        
         <div class="login-hero-side position-relative overflow-hidden">
-            <!-- Animated Interactive Mesh Canvas -->
+            
             <canvas id="tinMeshCanvas" class="tin-mesh-canvas" data-theme="dark"></canvas>
 
             <div class="d-flex align-items-center justify-content-between position-relative z-2">
@@ -72,7 +72,6 @@
             </div>
         </div>
 
-        <!-- Right Side: Elevated Luxury Login Form -->
         <div class="login-form-side">
             <div class="login-form-container">
                 <div class="login-brand-header text-center">
@@ -153,7 +152,6 @@
         </div>
     </div>
 
-    <!-- Scripts -->
     <script src="{{ asset('assets/js/tin-mesh.js') }}"></script>
     <script src="{{ asset('admin-assets/js/admin.js') }}"></script>
 </body>

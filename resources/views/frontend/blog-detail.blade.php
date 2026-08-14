@@ -5,7 +5,6 @@
 
 @section('content')
 
-<!-- Header Banner -->
 <section class="subpage-header-banner">
     <div class="container text-center">
         <nav class="breadcrumb-enterprise mb-3" aria-label="breadcrumb">
@@ -20,7 +19,6 @@
     </div>
 </section>
 
-<!-- Main Content -->
 <div class="py-5 mb-5">
     <div class="container">
         <div class="row justify-content-center">
@@ -45,7 +43,6 @@
                     </div>
                 </article>
 
-                <!-- Comments Section -->
                 <div class="card-enterprise p-4 p-md-5">
                     <h4 class="fw-extrabold text-dark mb-4 font-outfit d-flex align-items-center gap-2">
                         {!! render_svg_icon('envelope', 'text-primary me-2') !!} {{ __('blog.comments_title') }} ({{ $post->approvedComments->count() }})
@@ -72,11 +69,10 @@
 
                     <hr class="my-4">
 
-                    <!-- Comment Form -->
                     <h5 class="fw-bold text-dark mb-3 font-outfit d-flex align-items-center gap-2">{!! render_svg_icon('file-contract', 'me-2 text-primary') !!} {{ __('blog.leave_comment') }}</h5>
                     <form action="{{ route('blog.comment', $post->slug) }}" method="POST">
                         @csrf
-                        <!-- Invisible Honeypot field for bot spam prevention -->
+                        
                         <div style="display:none !important;" aria-hidden="true">
                             <input type="text" name="website" tabindex="-1" autocomplete="off">
                         </div>

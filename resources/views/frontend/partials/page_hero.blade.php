@@ -1,16 +1,3 @@
-{{--
-    Frontend Inner Page Hero Partial
-    Usage:
-    @include('frontend.partials.page_hero', [
-        'title' => 'Projelerimiz',
-        'highlightTitle' => 'Referans Projeler',
-        'subtitle' => 'Türkiye genelinde başarıyla bitirilen harita mühendislik ihaleleri.',
-        'breadcrumbs' => [
-            ['title' => 'Ana Sayfa', 'url' => route('home')],
-            ['title' => 'Projelerimiz', 'active' => true]
-        ]
-    ])
---}}
 <section class="subpage-header-banner py-5 bg-gradient-dark position-relative overflow-hidden">
     <div class="container text-center py-3 position-relative z-2" data-reveal="down">
         @if(!empty($breadcrumbs))

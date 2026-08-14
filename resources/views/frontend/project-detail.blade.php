@@ -5,7 +5,6 @@
 
 @section('content')
 
-<!-- Header Banner -->
 <section class="subpage-header-banner">
     <div class="container text-center">
         <nav class="breadcrumb-enterprise mb-3" aria-label="breadcrumb">
@@ -57,7 +56,6 @@
                     </div>
                 </div>
 
-                <!-- Project FAQs -->
                 @if(isset($faqs) && count($faqs) > 0)
                 <h4 class="mt-5 mb-3 text-dark font-heading">Proje & Saha İle İlgili Sıkça Sorulan Sorular</h4>
                 <div class="accordion" id="projectFaqAccordion">

@@ -1,9 +1,8 @@
-/* ============================================================
-   İPEK MÜHENDİSLİK — RESPONSIVE.CSS
-   Locked 1320px Container & Mobile Breakpoint Overrides
-   ============================================================ */
+/*!
+ * İpek Harita Mühendislik Sistemleri
+ * Developed by Kuzeyoku Software
+ */
 
-/* ── Force 1320px Container on Desktop (1200px+) ──────────── */
 @media (min-width: 1200px) {
     .container, 
     .container-lg, 
@@ -15,8 +14,6 @@
     }
 }
 
-
-/* ── Laptop / Desktop (992px - 1199px) ─────────────────────── */
 @media (max-width: 1199.98px) {
     :root {
         --header-height: 80px;
@@ -27,8 +24,6 @@
     }
 }
 
-
-/* ── Tablet (768px - 991px) ────────────────────────────────── */
 @media (max-width: 991.98px) {
     .topbar-enterprise {
         display: none;
@@ -49,8 +44,6 @@
     }
 }
 
-
-/* ── Mobile (576px - 767px) ────────────────────────────────── */
 @media (max-width: 767.98px) {
     h1 {
         font-size: 1.9rem;
@@ -66,8 +59,6 @@
     }
 }
 
-
-/* ── Small Mobile (< 576px) ────────────────────────────────── */
 @media (max-width: 575.98px) {
     h1 {
         font-size: 1.65rem;

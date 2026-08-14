@@ -4,7 +4,6 @@
 
 @section('content')
 
-<!-- Header Banner -->
 <section class="subpage-header-banner">
     <div class="container text-center">
         <nav class="breadcrumb-enterprise mb-3" aria-label="breadcrumb">
@@ -54,7 +53,6 @@
             </div>
         </div>
 
-        <!-- Vision & Mission -->
         <div class="bento-grid mb-5">
             <div class="bento-col-6" data-reveal="up">
                 <div class="bento-card-light h-100">
@@ -72,7 +70,6 @@
             </div>
         </div>
 
-        <!-- ── YÜKSEK TEKNOLOJİ HARİTA ENVANTERİ & EKİPMAN STACK ── -->
         <div class="my-5 pt-5 border-top">
             <div class="text-center max-w-700 mx-auto mb-5" data-reveal="up">
                 <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill font-mono mb-2">{!! render_svg_icon('layer-group', 'me-1') !!} {{ __('about.inventory_badge') }}</span>

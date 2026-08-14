@@ -1,6 +1,5 @@
-<!-- Fixed Enterprise Site Header -->
 <header class="site-header-fixed">
-    <!-- Topbar -->
+    
     <div class="topbar-enterprise d-none d-lg-block">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center">
@@ -11,8 +10,7 @@
                 <div class="d-flex align-items-center gap-3">
                     <a href="tel:{{ preg_replace('/[^0-9+]/', '', setting('company_phone')) }}">{!! render_svg_icon('phone', 'me-1') !!}@setting('company_phone')</a>
                     <a href="mailto:@setting('company_email')">{!! render_svg_icon('envelope', 'me-1') !!}@setting('company_email')</a>
-                    
-                    <!-- Language Switcher in Topbar -->
+
                     <div class="dropdown d-inline-block ms-2">
                         <button class="btn btn-sm btn-outline-light border-0 dropdown-toggle py-1 px-2.5 fw-semibold text-white d-inline-flex align-items-center gap-1.5" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 0.82rem; background: rgba(255,255,255,0.22); border-radius: 6px;">
                             <span class="d-inline-flex align-items-center gap-1">{!! render_flag_svg($currentLocale) !!} {{ strtoupper($currentLocale) }}</span>
@@ -33,7 +31,6 @@
         </div>
     </div>
 
-    <!-- Light Floating Capsule Navbar -->
     <div class="navbar-floating-container">
         <div class="container">
             <nav class="navbar navbar-expand-lg py-2">
@@ -42,7 +39,7 @@
                 </a>
 
                 <div class="d-flex align-items-center gap-2 ms-auto d-lg-none">
-                    <!-- Mobile Language Switcher -->
+                    
                     <div class="dropdown">
                         <button class="btn btn-sm btn-light border py-1 px-2.5 fw-bold text-dark d-inline-flex align-items-center gap-1.5" type="button" data-bs-toggle="dropdown">
                             <span>{!! render_flag_svg($currentLocale) !!} {{ strtoupper($currentLocale) }}</span>
@@ -73,7 +70,7 @@
                                 @endphp
 
                                 @if($menuItem->activeChildren->count() > 0)
-                                    <!-- Parent Menu with Submenus (Dropdown) -->
+                                    
                                     <li class="nav-item dropdown">
                                         <a class="nav-link-enterprise dropdown-toggle d-inline-flex align-items-center gap-1 {{ request()->is(ltrim($menuItem->url, '/')) ? 'active' : '' }}" href="{{ url($menuItem->url) }}" role="button" data-bs-toggle="dropdown" aria-expanded="false" target="{{ $menuItem->target }}">
                                             @if($mIcon) {!! render_svg_icon($mIcon, 'me-1 text-primary') !!} @endif
@@ -98,7 +95,7 @@
                                         </ul>
                                     </li>
                                 @else
-                                    <!-- Single Menu Item -->
+                                    
                                     <li class="nav-item">
                                         <a class="nav-link-enterprise d-inline-flex align-items-center {{ request()->is(ltrim($menuItem->url, '/')) ? 'active' : '' }}" href="{{ url($menuItem->url) }}" target="{{ $menuItem->target }}">
                                             @if($mIcon) {!! render_svg_icon($mIcon, 'me-1 text-primary') !!} @endif

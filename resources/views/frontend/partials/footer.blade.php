@@ -1,4 +1,3 @@
-<!-- FOOTER ENTERPRISE -->
 <footer class="footer-enterprise">
     <div class="container">
         <div class="row g-5 mb-5">

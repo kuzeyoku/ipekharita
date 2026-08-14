@@ -1,4 +1,3 @@
-<!-- ── CTA TEKLİF BANNER ───────────────────────────────────── -->
 <section id="teklif" class="py-5 my-4">
     <div class="container">
         <div class="cta-enterprise" style="background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 100%) !important; color: #FFFFFF !important; padding: 60px 45px; border-radius: 28px; box-shadow: 0 20px 45px rgba(15, 23, 42, 0.35);">

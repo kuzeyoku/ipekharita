@@ -1,6 +1,10 @@
+/*!
+ * İpek Harita Mühendislik Sistemleri
+ * Developed by Kuzeyoku Software
+ */
+
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@400;500;600;700;800&display=swap');
 
-/* ── Minimal, Compact & High-Density SaaS Enterprise Admin Stylesheet ─────── */
 :root {
     --admin-bg-light: #F8FAFC;
     --admin-card-bg: #FFFFFF;
@@ -23,7 +27,6 @@
     --admin-shadow-md: 0 8px 24px rgba(15, 23, 42, 0.06);
 }
 
-/* Global SVG Vector Icon Sizing Rule */
 svg, .svg-icon-vector {
     width: 1em;
     height: 1em;
@@ -33,7 +36,6 @@ svg, .svg-icon-vector {
     flex-shrink: 0;
 }
 
-/* Custom Icon Picker Button with Crisp Hover State */
 .btn-icon-picker {
     background-color: rgba(37, 99, 235, 0.08) !important;
     color: #2563EB !important;
@@ -61,12 +63,11 @@ body.admin-body-light {
     background: #F8FAFC;
     color: var(--admin-text-main);
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 0.875rem; /* 14px compact typography */
+    font-size: 0.875rem; 
     line-height: 1.5;
     min-height: 100vh;
 }
 
-/* Sidebar Compact */
 .admin-sidebar-light {
     width: 250px;
     background: var(--admin-sidebar-bg);
@@ -193,7 +194,6 @@ body.admin-body-light {
     transition: transform 0.2s ease;
 }
 
-/* Header Glassmorphism Compact */
 .admin-header-light {
     margin-left: 250px;
     height: 60px;
@@ -241,7 +241,6 @@ body.admin-body-light {
     font-weight: 700;
 }
 
-/* Header User Avatar */
 .admin-user-avatar {
     width: 38px;
     height: 38px;
@@ -269,13 +268,11 @@ body.admin-body-light {
     fill: #FFFFFF !important;
 }
 
-/* Main Container Compact */
 .admin-main-light {
     margin-left: 250px;
     padding: 28px;
 }
 
-/* Compact Stat Cards */
 .stat-card-light {
     background: var(--admin-card-bg);
     border: 1px solid var(--admin-border-light);
@@ -325,7 +322,6 @@ body.admin-body-light {
     color: #7C3AED;
 }
 
-/* Compact Admin Cards & Data Tables */
 .admin-card-light {
     background: var(--admin-card-bg);
     border: 1px solid var(--admin-border-light);
@@ -377,7 +373,6 @@ body.admin-body-light {
     background-color: rgba(37, 99, 235, 0.03);
 }
 
-/* Form Inputs Compact */
 .admin-label-light {
     font-weight: 700;
     font-size: 0.82rem;
@@ -401,7 +396,6 @@ body.admin-body-light {
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12) !important;
 }
 
-/* Buttons Compact */
 .btn-enterprise-admin {
     background: #2563EB;
     color: #FFFFFF !important;
@@ -426,7 +420,6 @@ body.admin-body-light {
     box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
 }
 
-/* Badges Compact */
 .badge-pill-enterprise {
     padding: 4px 12px;
     border-radius: 20px;
@@ -443,7 +436,6 @@ body.admin-body-light {
 .badge-pill-info { background: rgba(37, 99, 235, 0.1); color: #2563EB; }
 .badge-pill-muted { background: rgba(100, 116, 139, 0.1); color: #475569; }
 
-/* Status Pulse Indicator */
 .pulse-indicator {
     width: 8px;
     height: 8px;
@@ -460,7 +452,6 @@ body.admin-body-light {
     100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
 }
 
-/* ── Premium SaaS Custom Toggle Switches ──────────────────────────────────── */
 .form-switch {
     padding-left: 3.25rem !important;
     display: inline-flex !important;
@@ -523,7 +514,6 @@ body.admin-body-light {
     box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
 }
 
-/* ── Dropify Enterprise Custom Styling ────────────────────────────────────── */
 .dropify-wrapper {
     border: 2px dashed #CBD5E1 !important;
     border-radius: 12px !important;
@@ -542,7 +532,6 @@ body.admin-body-light {
     color: #64748B !important;
 }
 
-/* ── Utility Helper Classes ────────────────────────────────────────────────── */
 .font-outfit {
     font-family: 'Outfit', sans-serif !important;
 }
@@ -573,7 +562,6 @@ body.admin-body-light {
     max-width: 400px;
 }
 
-/* ── Ultra Split-Screen Enterprise SaaS Login Styling ──────────────────────── */
 body.login-body-light {
     background: #F8FAFC;
     min-height: 100vh;
@@ -592,7 +580,6 @@ body.login-body-light {
     overflow: hidden;
 }
 
-/* ── ANIMATED CAD WIREFRAME FOR DARK LOGIN HERO ── */
 @keyframes loginWireframePan {
     0% { background-position: 0 0, 0 0, 0 0, 0 0; }
     100% { background-position: 0 0, 0 0, 80px 80px, 80px 80px; }
@@ -631,7 +618,6 @@ body.login-body-light {
     z-index: 1;
 }
 
-/* Interactive TIN mesh canvas on login hero */
 .login-hero-side .tin-mesh-canvas {
     position: absolute;
     top: 0;
@@ -740,7 +726,6 @@ body.login-body-light {
     100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
 }
 
-/* ── RIGHT LOGIN FORM SIDE (ELEVATED MODERN LUXURY) ── */
 .login-form-side {
     flex: 1;
     background-color: #F8FAFC;
@@ -879,7 +864,6 @@ body.login-body-light {
     font-size: 0.85rem;
 }
 
-/* ── LUXURY MICRO-SWITCH (APPLE / FINTECH STYLE) ── */
 .luxury-switch-wrapper {
     cursor: pointer;
     display: inline-flex;
@@ -933,7 +917,6 @@ body.login-body-light {
     transform: translateX(18px);
 }
 
-/* Tactile Elastic Stretch on Click */
 .luxury-switch-wrapper:active .luxury-switch-knob {
     width: 22px;
 }
@@ -1038,7 +1021,6 @@ body.login-body-light {
     }
 }
 
-/* ── REUSABLE TYPOGRAPHY & BRAND LOGO CLASSES ── */
 .login-hero-logo {
     width: 300px;
     max-width: 100%;
@@ -1081,7 +1063,6 @@ body.login-body-light {
     font-size: 0.88rem;
 }
 
-/* ── UI/UX Pro Max SaaS Components & Modern Polish ──────────────────────── */
 .admin-card-glass {
     background: #FFFFFF;
     border: 1px solid var(--admin-border-light);
@@ -1150,7 +1131,6 @@ body.login-body-light {
     box-shadow: 0 4px 10px rgba(5, 150, 105, 0.25);
 }
 
-/* ── Modern Enterprise Pagination Styling ─────────────────────────────────── */
 .pagination {
     gap: 4px;
     margin-bottom: 0;
@@ -1219,11 +1199,3 @@ body.login-body-light {
     color: #94A3B8;
     font-size: 0.85rem;
 }
-
-
-
-
-
-
-
-

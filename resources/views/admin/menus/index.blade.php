@@ -12,7 +12,7 @@
 @include('admin.partials.alerts')
 
 <div class="row g-4">
-    <!-- Left Column: Current Menu Hierarchy Tree -->
+    
     <div class="col-lg-7">
         <div class="admin-card-glass">
             <div class="admin-card-header-light border-bottom">
@@ -32,7 +32,7 @@
                     <div class="menu-hierarchy-list d-flex flex-column gap-3">
                         @foreach($topMenus as $parent)
                             <div class="border rounded-3 p-3 bg-light bg-opacity-50">
-                                <!-- Parent Row -->
+                                
                                 <div class="d-flex align-items-center justify-content-between gap-2">
                                     <div class="d-flex align-items-center gap-3">
                                         <span class="badge bg-primary text-white font-mono px-2 py-1">Sıra: {{ $parent->order }}</span>
@@ -67,7 +67,6 @@
                                     </div>
                                 </div>
 
-                                <!-- Sub Menus (Children) -->
                                 @if($parent->children->count() > 0)
                                     <div class="ms-4 mt-3 pt-3 border-top border-secondary border-opacity-10 d-flex flex-column gap-2">
                                         <small class="text-muted fw-semibold mb-1 d-block">{!! render_svg_icon('chevron-right', 'me-1 text-primary') !!} Alt Menüler ({{ $parent->children->count() }})</small>
@@ -102,7 +101,6 @@
                                                 </div>
                                             </div>
 
-                                            <!-- Edit Child Modal -->
                                             <div class="modal fade" id="editMenuModal{{ $child->id }}" tabindex="-1" aria-hidden="true">
                                                 <div class="modal-dialog">
                                                     <form action="{{ route('admin.menus.update', $child->id) }}" method="POST">
@@ -179,7 +177,6 @@
                                 @endif
                             </div>
 
-                            <!-- Edit Parent Modal -->
                             <div class="modal fade" id="editMenuModal{{ $parent->id }}" tabindex="-1" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <form action="{{ route('admin.menus.update', $parent->id) }}" method="POST">
@@ -260,7 +257,6 @@
         </div>
     </div>
 
-    <!-- Right Column: Add New Menu Form -->
     <div class="col-lg-5">
         <div class="admin-card-glass">
             <div class="admin-card-header-light border-bottom">

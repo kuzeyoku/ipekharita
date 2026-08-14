@@ -13,7 +13,6 @@
 
 @include('admin.partials.alerts')
 
-<!-- Type Filters -->
 <div class="d-flex flex-wrap gap-2 mb-4">
     <a href="{{ route('admin.categories.index') }}" class="btn btn-sm {{ !$type ? 'btn-primary' : 'btn-light border' }} rounded-pill px-3 fw-semibold">
         Tüm Kategoriler

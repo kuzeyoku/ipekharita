@@ -1,9 +1,8 @@
-/* ============================================================
-   İPEK MÜHENDİSLİK — ANIMATIONS.CSS
-   Scroll Reveal, Entrance Animations, Keyframes
-   ============================================================ */
+/*!
+ * İpek Harita Mühendislik Sistemleri
+ * Developed by Kuzeyoku Software
+ */
 
-/* ── Scroll Reveal Base ────────────────────────────────────── */
 [data-reveal] {
     opacity: 0;
     transition: opacity 0.8s ease, transform 0.8s ease;
@@ -15,7 +14,6 @@
     transform: none !important;
 }
 
-/* Directions */
 [data-reveal="up"] {
     transform: translateY(40px);
 }
@@ -40,7 +38,6 @@
     transform: none;
 }
 
-/* Delay Utilities */
 [data-delay="100"] { transition-delay: 100ms; }
 [data-delay="200"] { transition-delay: 200ms; }
 [data-delay="300"] { transition-delay: 300ms; }
@@ -50,8 +47,6 @@
 [data-delay="700"] { transition-delay: 700ms; }
 [data-delay="800"] { transition-delay: 800ms; }
 
-
-/* ── Hero Animations ───────────────────────────────────────── */
 @keyframes heroFadeUp {
     from {
         opacity: 0;
@@ -72,7 +67,6 @@
 .hero-animate-delay-3 { animation-delay: 0.6s; opacity: 0; }
 .hero-animate-delay-4 { animation-delay: 0.8s; opacity: 0; }
 
-/* Scroll down indicator */
 @keyframes scrollBounce {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(8px); }
@@ -100,8 +94,6 @@
     font-size: 1.2rem;
 }
 
-
-/* ── Slider Animations ─────────────────────────────────────── */
 @keyframes slideProgressBar {
     from { width: 0; }
     to { width: 100%; }
@@ -136,7 +128,6 @@
     transform: scale(1.06);
 }
 
-/* Slider dots */
 .hero-dots {
     position: absolute;
     bottom: 80px;
@@ -178,8 +169,6 @@
     animation: slideProgressBar 6s linear forwards;
 }
 
-
-/* ── Floating Elements ─────────────────────────────────────── */
 @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-12px); }
@@ -198,21 +187,15 @@
     animation: floatSlow 6s ease-in-out infinite;
 }
 
-
-/* ── Counter Animation ─────────────────────────────────────── */
 .counter-value {
     display: inline-block;
 }
 
-
-/* ── Gradient Border Animation ─────────────────────────────── */
 @keyframes borderGlow {
     0%, 100% { border-color: var(--secondary); }
     50% { border-color: var(--accent); }
 }
 
-
-/* ── Particle / Decorative Shapes ──────────────────────────── */
 .decor-circle {
     position: absolute;
     border-radius: 50%;
@@ -235,13 +218,11 @@
     height: 150px;
 }
 
-/* Tech section grid anim */
 @keyframes gridPulse {
     0%, 100% { opacity: 0.3; }
     50% { opacity: 0.6; }
 }
 
-/* Loading screen */
 .page-loader {
     position: fixed;
     top: 0;
@@ -269,8 +250,6 @@
     border-radius: 50%;
     animation: spin 0.8s linear infinite;
 }
-
-/* ── Minimal Trinity F90+ Fixed-Wing VTOL Drone Animation ─────────────── */
 
 @keyframes trinityFlyPath {
     0% {
@@ -311,7 +290,6 @@
     animation: trinityFlyPath 22s linear infinite;
 }
 
-/* Subtle Flight Route Path SVG Line */
 .trinity-route-line {
     position: absolute;
     top: 35px;
@@ -324,7 +302,6 @@
     background: transparent !important;
 }
 
-/* Interactive TIN Triangulated Mesh Canvas */
 .tin-mesh-canvas {
     position: absolute;
     top: 0;
@@ -336,7 +313,6 @@
     opacity: 0.35;
 }
 
-/* Animated Wireframe CAD Panning Grid */
 @keyframes wireframePan {
     0% { background-position: 0 0; }
     100% { background-position: 72px 72px; }
@@ -348,4 +324,3 @@
     background-size: 36px 36px;
     animation: wireframePan 22s linear infinite;
 }
-

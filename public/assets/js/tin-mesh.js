@@ -1,7 +1,7 @@
-/* ============================================================
-   İPEK MÜHENDİSLİK — INTERACTIVE TIN MESH (TRIANGULATED NETWORK)
-   Mouse-Interactive Triangulated Surface Model Canvas Animation
-   ============================================================ */
+/*!
+ * İpek Harita Mühendislik Sistemleri
+ * Developed by Kuzeyoku Software
+ */
 
 document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('tinMeshCanvas');
@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const lineRgb = isDark ? '56, 189, 248' : '37, 99, 235';
     const mouseRgb = isDark ? '14, 165, 233' : '2, 132, 199';
 
-    // Mouse position tracker
     const mouse = {
         x: null,
         y: null,
@@ -42,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
         initPoints();
     });
 
-    // TIN Point Node Class
     class Point {
         constructor() {
             this.x = Math.random() * width;
@@ -56,11 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
             this.x += this.vx;
             this.y += this.vy;
 
-            // Bounce off boundaries
             if (this.x < 0 || this.x > width) this.vx *= -1;
             if (this.y < 0 || this.y > height) this.vy *= -1;
 
-            // Mouse attraction
             if (mouse.x !== null && mouse.y !== null) {
                 const dx = mouse.x - this.x;
                 const dy = mouse.y - this.y;
@@ -94,17 +90,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initPoints();
 
-    // Animation Loop
     function animate() {
         ctx.clearRect(0, 0, width, height);
 
-        // Update & Draw Points
         for (let i = 0; i < points.length; i++) {
             points[i].update();
             points[i].draw();
         }
 
-        // Draw Triangulation Mesh Lines & Triangles
         const maxDist = 140;
         for (let i = 0; i < points.length; i++) {
             for (let j = i + 1; j < points.length; j++) {
@@ -121,7 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     ctx.lineWidth = 0.9;
                     ctx.stroke();
 
-                    // Form subtle filled triangles for 3 nodes that are close
                     for (let k = j + 1; k < points.length; k++) {
                         const dx2 = points[j].x - points[k].x;
                         const dy2 = points[j].y - points[k].y;
@@ -141,7 +133,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
 
-            // Connect to Mouse Cursor
             if (mouse.x !== null && mouse.y !== null) {
                 const mDx = points[i].x - mouse.x;
                 const mDy = points[i].y - mouse.y;

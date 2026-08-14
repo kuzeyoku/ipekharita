@@ -1,15 +1,3 @@
-{{--
-    Admin Page Header Partial
-    Usage:
-    @include('admin.partials.page_header', [
-        'title' => 'Kullanıcı Yönetimi',
-        'subtitle' => 'Sistem yöneticilerini ve erişim yetkilerini yönetin.',
-        'icon' => 'fa-users',
-        'backUrl' => route('admin.users.index'), // optional
-        'createUrl' => route('admin.users.create'), // optional
-        'createTitle' => 'Yeni Kullanıcı Ekle', // optional
-    ])
---}}
 <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-4 p-3 bg-white rounded-4 shadow-sm border">
     <div>
         @if(!empty($backUrl))

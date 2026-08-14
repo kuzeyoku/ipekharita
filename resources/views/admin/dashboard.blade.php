@@ -11,9 +11,8 @@
 
 @include('admin.partials.alerts')
 
-<!-- Visitor Counter & Main Communication Stat Cards -->
 <div class="row g-3 mb-4">
-    <!-- Bugün -->
+    
     <div class="col-md-3">
         <div class="stat-card-light">
             <div>
@@ -29,7 +28,6 @@
         </div>
     </div>
 
-    <!-- Bu Hafta -->
     <div class="col-md-3">
         <div class="stat-card-light">
             <div>
@@ -45,7 +43,6 @@
         </div>
     </div>
 
-    <!-- Bu Ay -->
     <div class="col-md-3">
         <div class="stat-card-light">
             <div>
@@ -61,7 +58,6 @@
         </div>
     </div>
 
-    <!-- Toplam -->
     <div class="col-md-3">
         <div class="stat-card-light">
             <div>
@@ -78,7 +74,6 @@
     </div>
 </div>
 
-<!-- Secondary Metrics: Messages, Comments & Total Page Views -->
 <div class="row g-3 mb-4">
     <div class="col-md-4">
         <div class="stat-card-light bg-white border">
@@ -133,7 +128,6 @@
     </div>
 </div>
 
-<!-- Chart.js Analytics Widget & Quick Actions -->
 <div class="row g-4 mb-4">
     <div class="col-lg-8">
         <div class="admin-card-glass mb-0">
@@ -176,7 +170,6 @@
     </div>
 </div>
 
-<!-- Recent Messages Table -->
 <div class="admin-card-glass">
     <div class="admin-card-header-light py-3 border-bottom">
         <h6 class="mb-0 fw-bold text-dark small font-outfit"><i class="fa-solid fa-inbox text-primary me-1"></i> Son Gelen Müşteri İletileri</h6>

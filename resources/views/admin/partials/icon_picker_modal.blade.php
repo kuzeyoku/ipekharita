@@ -1,4 +1,3 @@
-<!-- FontAwesome Icon Picker Modal -->
 <div class="modal fade" id="iconPickerModal" tabindex="-1" aria-labelledby="iconPickerModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
@@ -16,12 +15,11 @@
             </div>
             
             <div class="modal-body p-4 bg-light">
-                <!-- Search Bar -->
+                
                 <div class="position-relative mb-4">
                     <input type="text" id="iconSearchInput" class="form-control form-control-lg rounded-3 fs-6" placeholder="İkon ismi veya kategori ara... (örn: harita, bina, ev, gazete, telefon, kurum)">
                 </div>
 
-                <!-- Icon Grid -->
                 <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-3" id="iconGrid">
                     @php
                         $icons = [

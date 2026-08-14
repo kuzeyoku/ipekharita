@@ -17,7 +17,7 @@
     @method('PUT')
 
     <div class="row g-4">
-        <!-- Sol Ana İçerik Sütunu -->
+        
         <div class="col-lg-8">
             <div class="admin-card-glass p-4">
                 <h5 class="fw-bold text-dark mb-4 border-bottom pb-2 font-outfit">Referans Bilgileri</h5>
@@ -35,9 +35,8 @@
             </div>
         </div>
 
-        <!-- Sağ Yan Sütun (Resim Üstte, Yayın Ayarları Altta) -->
         <div class="col-lg-4">
-            <!-- 1. Görsel Kartı (En Üstte) -->
+            
             <div class="admin-card-glass p-4 mb-4">
                 <h5 class="fw-bold text-dark mb-3 border-bottom pb-2 font-outfit">Kurum / Marka Logosu</h5>
                 @php
@@ -55,7 +54,6 @@
                 <input type="file" name="image" class="dropify" data-height="150" data-allowed-file-extensions="png jpg jpeg webp svg gif">
             </div>
 
-            <!-- 2. Yayın & Hizalama Ayarları -->
             <div class="admin-card-glass p-4">
                 <h5 class="fw-bold text-dark mb-3 border-bottom pb-2 font-outfit">Yayın Ayarları</h5>
 

@@ -10,7 +10,6 @@
     <link rel="canonical" href="{{ url()->current() }}">
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/hero/icon.png') }}">
 
-    <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:site_name" content="@setting('site_title')">
@@ -22,13 +21,10 @@
     <meta name="twitter:description" content="@yield('meta_description', setting('site_description'))">
     <meta name="twitter:image" content="@yield('meta_image', asset('assets/img/hero/slide-2.png'))">
 
-    <!-- Bootstrap 5 CSS -->
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
 
-    <!-- FontAwesome 6 CSS -->
     <link rel="stylesheet" href="{{ asset('assets/fontawesome/css/all.min.css') }}">
 
-    <!-- Custom Enterprise CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/components.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/animations.css') }}">
@@ -39,10 +35,8 @@
 </head>
 <body>
 
-    <!-- Header Partial -->
     @include('frontend.partials.header')
 
-    <!-- Main Content -->
     <main>
         @yield('content')
 
@@ -52,13 +46,10 @@
         @endif
     </main>
 
-    <!-- Footer Partial -->
     @include('frontend.partials.footer')
 
-    <!-- Bootstrap 5 JS Bundle -->
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
 
-    <!-- Custom Theme JS Scripts -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
     <script src="{{ asset('assets/js/animations.js') }}"></script>
     <script src="{{ asset('assets/js/tin-mesh.js') }}"></script>

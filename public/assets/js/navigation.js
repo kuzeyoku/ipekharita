@@ -1,7 +1,7 @@
-/* ============================================================
-   İPEK MÜHENDİSLİK — NAVIGATION.JS
-   Enterprise navbar sticky state & mobile menu control
-   ============================================================ */
+/*!
+ * İpek Harita Mühendislik Sistemleri
+ * Developed by Kuzeyoku Software
+ */
 
 'use strict';
 
@@ -21,9 +21,6 @@ const IpekNav = {
         this.mobileMenu();
     },
 
-    /**
-     * Sticky header state
-     */
     stickyHeader() {
         if (!this.navbar) return;
 
@@ -36,9 +33,6 @@ const IpekNav = {
         }, { passive: true });
     },
 
-    /**
-     * Mobile menu
-     */
     mobileMenu() {
         if (!this.toggler || !this.collapse) return;
 

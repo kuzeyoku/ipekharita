@@ -1,9 +1,3 @@
-{{--
-    Admin Form Validation Alert Partial
-    Note: Flash success & error notifications are automatically handled via SweetAlert2 Toast in master layout.
-    Usage: @include('admin.partials.alerts')
---}}
-
 @if ($errors->any())
     <div class="alert alert-danger alert-dismissible fade show rounded-3 shadow-sm border-0 mb-4" role="alert">
         <div class="d-flex align-items-center gap-2 mb-2">

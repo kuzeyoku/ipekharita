@@ -6,10 +6,9 @@
         <p class="text-secondary small mb-0">Kamu idareleri, belediyeler ve yüklenici ortaklarımızla sürdürülen projelere ait liyakat referansları.</p>
     </div>
 
-    <!-- Infinite Single-Row Horizontal Marquee -->
     <div class="marquee-wrapper position-relative py-3">
         <div class="marquee-track">
-            <!-- First Set -->
+            
             @foreach($references as $refItem)
                 @php
                     $logoPath = data_get($refItem, 'logo') ?: data_get($refItem, 'image');
@@ -24,7 +23,6 @@
                 </div>
             @endforeach
 
-            <!-- Duplicate Set for Seamless Continuous Loop -->
             @foreach($references as $refItem)
                 @php
                     $logoPath = data_get($refItem, 'logo') ?: data_get($refItem, 'image');

@@ -2,15 +2,13 @@
 
 @section('content')
 
-<!-- ── HERO SECTION: LARGE SCALE ENTERPRISE CADASTRAL & 3D OBLIQUE ── -->
 <section class="hero-enterprise bg-wireframe-animated position-relative overflow-hidden">
-    <!-- Interactive Mouse-Tracking TIN Triangulated Mesh Canvas -->
+    
     <canvas id="tinMeshCanvas" class="tin-mesh-canvas"></canvas>
 
     <div class="container position-relative" style="z-index: 2;">
         <div class="row align-items-center g-5">
 
-            <!-- Hero Left Text -->
             <div class="col-lg-7" data-reveal="left">
                 <div class="corporate-badge mb-3">
                     <span class="pulse-dot"></span> {{ __('home.hero_badge') }}
@@ -31,7 +29,6 @@
                     </a>
                 </div>
 
-                <!-- Public Agency Tags Showcase -->
                 <div class="d-flex flex-wrap align-items-center gap-2 pt-3 border-top border-slate-200">
                     <span class="small text-muted fw-bold me-2">{{ __('home.compliance_badge') }}</span>
                     <span class="agency-tag agency-tag-tkgm">TKGM 22/a</span>
@@ -42,7 +39,6 @@
                 </div>
             </div>
 
-            <!-- Hero Right Corporate Scale Image & Stats Card -->
             <div class="col-lg-5" data-reveal="right">
                 <div class="hero-track-record-card">
                     <div class="position-relative rounded-4 overflow-hidden mb-4 p-2 bg-light border" style="height: 300px;">
@@ -73,8 +69,6 @@
     </div>
 </section>
 
-
-<!-- ── TRACK RECORD / METRICS SECTION ────────────────────────── -->
 <section class="py-5 bg-section-slate position-relative overflow-hidden">
     <div class="container">
         <div class="row g-4 text-center">
@@ -106,15 +100,12 @@
     </div>
 </section>
 
-
-<!-- ── BENTO GRID SERVICES SECTION ─────────────────────────────────── -->
 <section id="hizmetler" class="py-5 bg-white position-relative overflow-hidden">
-    <!-- Subtle Wavy Flight Route Path Line -->
+    
     <svg class="trinity-route-line d-none d-md-block" viewBox="0 0 1000 100" preserveAspectRatio="none" fill="none" style="background: transparent;">
         <path d="M -50 50 C 150 15, 250 85, 400 50 C 550 15, 650 85, 800 50 C 920 25, 980 75, 1050 50" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 6"/>
     </svg>
 
-    <!-- Trinity F90+ Fixed-Wing VTOL Drone Background Vector -->
     <div class="trinity-f90-drone-bg d-none d-md-block">
         <img src="{{ asset('assets/img/vector/trinity-f90.svg') }}" alt="Trinity F90+ VTOL Survey Drone" class="w-100 h-100">
     </div>
@@ -131,12 +122,11 @@
             </div>
         </div>
 
-        <!-- Bento Grid Layout -->
         <div class="bento-grid">
 
             @foreach($services as $service)
                 @if($loop->first)
-                    <!-- Featured Hero Bento Card -->
+                    
                     <div class="bento-col-8" data-reveal="up" data-delay="100">
                         <div class="bento-card-light bento-card-hero-light h-100 d-flex flex-column justify-content-between">
                             <div>
@@ -165,7 +155,7 @@
                         </div>
                     </div>
                 @else
-                    <!-- Standard Bento Card -->
+                    
                     <div class="bento-col-4" data-reveal="up" data-delay="{{ $loop->iteration * 100 }}">
                         <div class="bento-card-light h-100 d-flex flex-column justify-content-between">
                             <div>
@@ -186,7 +176,6 @@
     </div>
 </section>
 
-<!-- ── 4 ADIMDA İHALE & SAHA İMALAT İŞ AKIŞI METODOLOJİSİ ── -->
 <section id="is-akisi" class="py-5 bg-white border-top border-bottom">
     <div class="container">
         <div class="text-center mb-5" data-reveal="up">
@@ -228,7 +217,6 @@
     </div>
 </section>
 
-<!-- ── FEATURED PROJECTS SHOWCASE ───────────────────────────── -->
 <section id="projeler" class="bg-section-contour-light position-relative overflow-hidden py-5">
     <div class="container position-relative" style="z-index: 2;">
         <div class="d-flex justify-content-between align-items-end mb-5" data-reveal="up">
@@ -270,7 +258,6 @@
     </div>
 </section>
 
-<!-- ── LATEST BLOG ARTICLES SECTION ───────────────────────────── -->
 @if(isset($posts) && is_countable($posts) && count($posts) > 0)
 <section class="py-5 bg-white border-top">
     <div class="container">
@@ -300,7 +287,6 @@
 </section>
 @endif
 
-<!-- ── REFERENCES / CLIENT LOGOS SECTION ───────────────────────────── -->
 @include('frontend.partials.references_showcase')
 
 @endsection

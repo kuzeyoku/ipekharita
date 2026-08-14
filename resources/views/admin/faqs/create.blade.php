@@ -16,7 +16,7 @@
     @csrf
 
     <div class="row g-4">
-        <!-- Sol Ana İçerik Sütunu -->
+        
         <div class="col-lg-8">
             @include('admin.partials.translatable_fields', [
                 'title'  => 'Soru & Cevap İçeriği',
@@ -28,7 +28,6 @@
             ])
         </div>
 
-        <!-- Sağ Yan Sütun (Modül Türü & Yayın Ayarları) -->
         <div class="col-lg-4">
             <div class="admin-card-glass p-4 mb-4">
                 <h5 class="fw-bold text-dark mb-3 border-bottom pb-2 font-outfit">Modül Bağlantısı</h5>
@@ -43,7 +42,6 @@
                     @error('module_type') <div class="invalid-feedback d-block">{{ $message }}</div> @enderror
                 </div>
 
-                <!-- Belirli Bir Hizmet Seçimi (Opsiyonel) -->
                 <div class="mb-3" id="serviceSelectorWrapper" style="display: none;">
                     <label class="admin-label-light">Özel Hizmet Seçimi</label>
                     <select name="service_id" class="form-select admin-input-light">
@@ -55,7 +53,6 @@
                     <small class="text-muted d-block mt-1" style="font-size: 0.76rem;">Belirli bir hizmet seçerseniz, SSS sadece o hizmetin detayında görünür.</small>
                 </div>
 
-                <!-- Belirli Bir Proje Seçimi (Opsiyonel) -->
                 <div class="mb-3" id="projectSelectorWrapper" style="display: none;">
                     <label class="admin-label-light">Özel Proje Seçimi</label>
                     <select name="project_id" class="form-select admin-input-light">
@@ -68,7 +65,6 @@
                 </div>
             </div>
 
-            <!-- Yayın & Sıralama Ayarları -->
             <div class="admin-card-glass p-4">
                 <h5 class="fw-bold text-dark mb-3 border-bottom pb-2 font-outfit">Yayın Ayarları</h5>
 

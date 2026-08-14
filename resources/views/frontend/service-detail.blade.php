@@ -5,7 +5,6 @@
 
 @section('content')
 
-<!-- Header Banner -->
 <section class="subpage-header-banner">
     <div class="container text-center">
         <nav class="breadcrumb-enterprise mb-3" aria-label="breadcrumb">
@@ -20,11 +19,10 @@
     </div>
 </section>
 
-<!-- Detail Content -->
 <div class="py-5 mb-5">
     <div class="container">
         <div class="row g-5">
-            <!-- Main Body -->
+            
             <div class="col-lg-8" data-reveal="left">
                 @if($service->image)
                     <div class="card-enterprise p-3 mb-4 bg-light border text-center">
@@ -76,7 +74,6 @@
                     </div>
                 </div>
 
-                <!-- FAQ Section -->
                 @if(isset($faqs) && count($faqs) > 0)
                 <h3 class="h4 mt-5 mb-3">{{ __('services.faq_title') }}</h3>
                 <div class="accordion" id="faqAccordion">
@@ -98,7 +95,6 @@
                 @endif
             </div>
 
-            <!-- Sidebar -->
             <div class="col-lg-4" data-reveal="right">
                 <div class="card-enterprise p-4 mb-4">
                     <h4 class="h5 mb-3">{{ __('common.other_services') }}</h4>
