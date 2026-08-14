@@ -103,7 +103,7 @@
                         <div class="input-group login-input-group">
                             <span class="input-group-text"><i class="fa-solid fa-at"></i></span>
                             <input type="email" name="email" value="{{ old('email') }}" class="form-control"
-                                placeholder="admin@ipekmuhendislik.com.tr" required autofocus autocomplete="username">
+                                placeholder="admin@ipekharita.com" required autofocus autocomplete="username">
                         </div>
                     </div>
 
