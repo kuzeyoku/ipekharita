@@ -20,6 +20,9 @@
 /public/storage
 /storage/*.key
 /storage/pail
+/.agents
+/tema
+/tests
 _ide_helper.php
 Homestead.json
 Homestead.yaml
