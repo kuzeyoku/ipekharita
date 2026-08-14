@@ -1,7 +1,8 @@
-/*!
- * İpek Harita Mühendislik Sistemleri
- * Developed by Kuzeyoku Software
- */
+/* ============================================================
+   İPEK HARİTA MÜHENDİSLİK — NAVIGATION.JS
+   Sticky Header Blur, Mega Menus & Mobile Drawer Navigation
+   Developed by Kuzeyoku Software
+   ============================================================ */
 
 'use strict';
 

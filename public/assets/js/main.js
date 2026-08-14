@@ -1,7 +1,8 @@
-/*!
- * İpek Harita Mühendislik Sistemleri
- * Developed by Kuzeyoku Software
- */
+/* ============================================================
+   İPEK HARİTA MÜHENDİSLİK — MAIN.JS
+   Frontend Core Logic, Cookie Consent & Interactive Accordions
+   Developed by Kuzeyoku Software
+   ============================================================ */
 
 'use strict';
 

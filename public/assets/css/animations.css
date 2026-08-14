@@ -1,7 +1,8 @@
-/*!
- * İpek Harita Mühendislik Sistemleri
- * Developed by Kuzeyoku Software
- */
+/* ============================================================
+   İPEK HARİTA MÜHENDİSLİK — ANIMATIONS.CSS
+   Scroll Reveal, Entrance Animations, Mesh & CAD Keyframes
+   Developed by Kuzeyoku Software
+   ============================================================ */
 
 [data-reveal] {
     opacity: 0;

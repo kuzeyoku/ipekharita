@@ -1,7 +1,8 @@
-/*!
- * İpek Harita Mühendislik Sistemleri
- * Developed by Kuzeyoku Software
- */
+/* ============================================================
+   İPEK HARİTA MÜHENDİSLİK — ADMIN.JS
+   Executive Management Console Core Operations & AJAX
+   Developed by Kuzeyoku Software
+   ============================================================ */
 
 $(document).ready(function () {
     if ($.fn.dropify) {

@@ -1,7 +1,8 @@
-/*!
- * İpek Harita Mühendislik Sistemleri
- * Developed by Kuzeyoku Software
- */
+/* ============================================================
+   İPEK HARİTA MÜHENDİSLİK — RESPONSIVE.CSS
+   Mobile-First Layout Adaptations & Touch Breakpoints
+   Developed by Kuzeyoku Software
+   ============================================================ */
 
 @media (min-width: 1200px) {
     .container, 

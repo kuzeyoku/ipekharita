@@ -1,7 +1,8 @@
-/*!
- * İpek Harita Mühendislik Sistemleri
- * Developed by Kuzeyoku Software
- */
+/* ============================================================
+   İPEK HARİTA MÜHENDİSLİK — TIN-MESH.JS
+   Interactive CAD Triangulated Irregular Network (TIN) Canvas
+   Developed by Kuzeyoku Software
+   ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('tinMeshCanvas');

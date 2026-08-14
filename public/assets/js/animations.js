@@ -1,7 +1,8 @@
-/*!
- * İpek Harita Mühendislik Sistemleri
- * Developed by Kuzeyoku Software
- */
+/* ============================================================
+   İPEK HARİTA MÜHENDİSLİK — ANIMATIONS.JS
+   Intersection Observer Scroll Reveal & Dynamic Counters
+   Developed by Kuzeyoku Software
+   ============================================================ */
 
 'use strict';
 

@@ -1,7 +1,8 @@
-/*!
- * İpek Harita Mühendislik Sistemleri
- * Developed by Kuzeyoku Software
- */
+/* ============================================================
+   İPEK HARİTA MÜHENDİSLİK — SLIDER.JS
+   Enterprise Hero Carousel & Interactive Slide Physics
+   Developed by Kuzeyoku Software
+   ============================================================ */
 
 'use strict';
 
