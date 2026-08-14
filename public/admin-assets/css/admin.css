@@ -329,8 +329,8 @@ body.admin-body-light {
 .admin-card-light {
     background: var(--admin-card-bg);
     border: 1px solid var(--admin-border-light);
-    border-radius: 14px;
-    overflow: hidden;
+    border-radius: 16px !important;
+    overflow: hidden !important;
     margin-bottom: 20px;
     box-shadow: var(--admin-shadow-sm);
 }
@@ -339,6 +339,8 @@ body.admin-body-light {
     padding: 16px 20px;
     background: #FFFFFF;
     border-bottom: 1px solid var(--admin-border-light);
+    border-top-left-radius: 16px !important;
+    border-top-right-radius: 16px !important;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1083,9 +1085,27 @@ body.login-body-light {
 .admin-card-glass {
     background: #FFFFFF;
     border: 1px solid var(--admin-border-light);
-    border-radius: 16px;
+    border-radius: 16px !important;
+    overflow: hidden !important;
     box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
     transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.admin-card-glass > .admin-card-header-light,
+.admin-card-light > .admin-card-header-light {
+    border-top-left-radius: 16px !important;
+    border-top-right-radius: 16px !important;
+}
+
+.card {
+    border-radius: 16px !important;
+    border: 1px solid var(--admin-border-light) !important;
+    overflow: hidden !important;
+}
+
+.card-header {
+    border-top-left-radius: 16px !important;
+    border-top-right-radius: 16px !important;
 }
 
 .admin-card-glass:hover {
