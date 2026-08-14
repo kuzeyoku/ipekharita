@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Subtle Grid overlay -->
+    <pattern id="topoGridPattern" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#2563EB" stroke-width="0.5" stroke-dasharray="2,4" opacity="0.12"/>
+      <circle cx="0" cy="0" r="1.5" fill="#2563EB" opacity="0.25"/>
+    </pattern>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#topoGridPattern)" />
+
+  <g fill="none" stroke="#2563EB" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Outer Low Elevation Contour Lines -->
+    <path d="M -100,120 Q 250,-40 650,140 T 1400,60 T 1700,180" stroke-width="1.2" opacity="0.22"/>
+    <path d="M -100,170 Q 270,10 670,190 T 1420,110 T 1700,230" stroke-width="1.2" opacity="0.28"/>
+    <path d="M -100,220 Q 290,60 690,240 T 1440,160 T 1700,280" stroke-width="1.2" opacity="0.35"/>
+    
+    <!-- Index Contour Line (Kalın Ana Münhani - 250m) -->
+    <path d="M -100,270 Q 310,110 710,290 T 1460,210 T 1700,330" stroke-width="2.6" stroke="#0284C7" opacity="0.55"/>
+    
+    <path d="M -100,320 Q 330,160 730,340 T 1480,260 T 1700,380" stroke-width="1.2" opacity="0.38"/>
+    <path d="M -100,370 Q 350,210 750,390 T 1500,310 T 1700,430" stroke-width="1.2" opacity="0.42"/>
+    <path d="M -100,420 Q 370,260 770,440 T 1520,360 T 1700,480" stroke-width="1.2" opacity="0.48"/>
+
+    <!-- Concentric Peak 1 (Sol Tepe / High Ridge Hill 1) -->
+    <path d="M 150,580 C 260,380 620,400 740,560 C 840,700 580,840 380,810 C 210,780 100,690 150,580 Z" stroke-width="1.4" opacity="0.35"/>
+    <path d="M 200,590 C 290,420 570,435 670,570 C 760,680 540,790 380,760 C 240,735 160,670 200,590 Z" stroke-width="1.5" opacity="0.45"/>
+    <!-- Index Contour 350m -->
+    <path d="M 250,600 C 320,460 520,470 600,580 C 680,660 500,740 380,720 C 270,700 210,650 250,600 Z" stroke-width="2.6" stroke="#0284C7" opacity="0.65"/>
+    <path d="M 300,610 C 350,500 470,505 530,590 C 590,640 460,700 380,680 C 300,665 260,630 300,610 Z" stroke-width="1.6" opacity="0.55"/>
+    <path d="M 340,615 C 375,535 435,538 475,600 C 515,635 425,670 375,655 C 335,640 315,625 340,615 Z" stroke-width="1.8" opacity="0.7"/>
+    
+    <!-- Peak Nirengi Spot Height -->
+    <polygon points="400,580 407,592 393,592" fill="#0EA5E9" opacity="0.85"/>
+    <circle cx="400" cy="587" r="2" fill="#0F172A"/>
+
+    <!-- Concentric Peak 2 (Sağ Üst Tepe / High Ridge Hill 2) -->
+    <path d="M 920,280 C 1040,120 1380,140 1480,310 C 1570,460 1320,600 1120,540 C 960,490 840,380 920,280 Z" stroke-width="1.4" opacity="0.32"/>
+    <path d="M 980,290 C 1080,160 1320,180 1410,310 C 1490,430 1280,540 1110,490 C 980,450 900,370 980,290 Z" stroke-width="1.5" opacity="0.42"/>
+    <!-- Index Contour 400m -->
+    <path d="M 1040,300 C 1120,200 1260,210 1340,310 C 1410,400 1230,490 1100,450 C 1000,420 950,360 1040,300 Z" stroke-width="2.6" stroke="#0284C7" opacity="0.65"/>
+    <path d="M 1100,315 C 1165,240 1210,245 1270,320 C 1320,375 1180,440 1090,410 C 1020,385 1020,345 1100,315 Z" stroke-width="1.6" opacity="0.55"/>
+
+    <!-- Bottom Secondary Contour Waves -->
+    <path d="M -100,720 Q 350,580 800,760 T 1700,680" stroke-width="1.2" opacity="0.35"/>
+    <path d="M -100,770 Q 370,630 820,810 T 1700,730" stroke-width="1.2" opacity="0.42"/>
+    <path d="M -100,820 Q 390,680 840,860 T 1700,780" stroke-width="2.6" stroke="#0284C7" opacity="0.55"/>
+  </g>
+
+  <!-- Monospace Elevation Labels (+250m, +300m, +350m, +400m, P.104 587m) -->
+  <g font-family="monospace" font-size="11" font-weight="bold" fill="#0284C7" opacity="0.75">
+    <text x="310" y="278" transform="rotate(-12 310 278)">+250m</text>
+    <text x="710" y="278" transform="rotate(8 710 278)">+250m</text>
+
+    <text x="235" y="608" transform="rotate(-40 235 608)">+350m</text>
+    <text x="415" y="575">▲ P.102 H:587.40m</text>
+
+    <text x="1030" y="295" transform="rotate(-35 1030 295)">+400m</text>
+    <text x="1220" y="305" transform="rotate(25 1220 305)">+400m</text>
+    <text x="1115" y="295">▲ P.104 H:612.80m</text>
+    
+    <text x="380" y="805" transform="rotate(-10 380 805)">+200m</text>
+  </g>
+</svg>

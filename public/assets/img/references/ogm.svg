@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60">
+  <g transform="translate(10, 5)">
+    <circle cx="25" cy="25" r="22" fill="#15803D"/>
+    <path d="M25 10 L35 25 L30 25 L38 37 L12 37 L20 25 L15 25 Z" fill="#FFFFFF"/>
+    <rect x="23" y="37" width="4" height="7" fill="#FEF08A"/>
+  </g>
+  <text x="68" y="28" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-weight="800" font-size="16" fill="#0F172A">OGM</text>
+  <text x="68" y="44" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-weight="600" font-size="9" fill="#64748B">ORMAN GENEL MÜDÜRLÜĞÜ</text>
+</svg>

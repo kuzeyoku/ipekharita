@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="600" viewBox="0 0 1600 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Technical CAD Coordinate Grid Pattern -->
+    <pattern id="cadSurveyGrid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#2563EB" stroke-width="0.5" stroke-dasharray="2,4" opacity="0.16"/>
+      <!-- Grid Crosshairs (+) -->
+      <path d="M -5 0 L 5 0 M 0 -5 L 0 5" stroke="#38BDF8" stroke-width="0.8" opacity="0.35"/>
+    </pattern>
+
+    <!-- Vertical Gradient Overlay Mask -->
+    <linearGradient id="cadMaskGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.15"/>
+      <stop offset="45%" stop-color="#FFFFFF" stop-opacity="0.50"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.90"/>
+    </linearGradient>
+
+    <mask id="gnssCadMask">
+      <rect width="100%" height="100%" fill="url(#cadMaskGradient)"/>
+    </mask>
+  </defs>
+
+  <g mask="url(#gnssCadMask)">
+    <!-- 1. CAD Survey Coordinate Grid Background -->
+    <rect width="100%" height="100%" fill="url(#cadSurveyGrid)"/>
+
+    <!-- 2. GNSS SATELLITES & SIGNAL RAYS IN SPACE -->
+    <!-- Satellite 1 (Left Upper Orbit) -->
+    <g transform="translate(300, 70)" stroke="#38BDF8">
+      <!-- Solar Panels & Satellite Body -->
+      <rect x="-12" y="-6" width="24" height="12" fill="#0EA5E9" stroke-width="1"/>
+      <line x1="-35" y1="0" x2="-12" y2="0" stroke-width="2"/>
+      <line x1="12" y1="0" x2="35" y2="0" stroke-width="2"/>
+      <rect x="-35" y="-7" width="15" height="14" fill="none" stroke-width="0.8"/>
+      <rect x="20" y="-7" width="15" height="14" fill="none" stroke-width="0.8"/>
+      <!-- Signal Cones -->
+      <path d="M 0,6 L -160,350 M 0,6 L 160,350" stroke="#0284C7" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.45"/>
+    </g>
+
+    <!-- Satellite 2 (Center Orbit - CORS Signal Master) -->
+    <g transform="translate(800, 50)" stroke="#38BDF8">
+      <rect x="-15" y="-8" width="30" height="16" fill="#0284C7" stroke-width="1"/>
+      <line x1="-42" y1="0" x2="-15" y2="0" stroke-width="2.2"/>
+      <line x1="15" y1="0" x2="42" y2="0" stroke-width="2.2"/>
+      <rect x="-42" y="-9" width="18" height="18" fill="none" stroke-width="0.9"/>
+      <rect x="24" y="-9" width="18" height="18" fill="none" stroke-width="0.9"/>
+      <!-- Satellite Rays down to CORS Base Station & Ground Rover -->
+      <line x1="0" y1="8" x2="-350" y2="380" stroke="#38BDF8" stroke-width="1" stroke-dasharray="4,4" opacity="0.50"/>
+      <line x1="0" y1="8" x2="0" y2="350" stroke="#38BDF8" stroke-width="1.2" stroke-dasharray="4,4" opacity="0.65"/>
+      <line x1="0" y1="8" x2="380" y2="390" stroke="#38BDF8" stroke-width="1" stroke-dasharray="4,4" opacity="0.50"/>
+    </g>
+
+    <!-- Satellite 3 (Right Orbit) -->
+    <g transform="translate(1300, 80)" stroke="#38BDF8">
+      <rect x="-12" y="-6" width="24" height="12" fill="#0EA5E9" stroke-width="1"/>
+      <line x1="-35" y1="0" x2="-12" y2="0" stroke-width="2"/>
+      <line x1="12" y1="0" x2="35" y2="0" stroke-width="2"/>
+      <rect x="-35" y="-7" width="15" height="14" fill="none" stroke-width="0.8"/>
+      <rect x="20" y="-7" width="15" height="14" fill="none" stroke-width="0.8"/>
+      <path d="M 0,6 L -180,340 M 0,6 L 180,340" stroke="#0284C7" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.45"/>
+    </g>
+
+    <!-- 3. GEODETIC TRIANGULATION MESH NETWORK & CORS BASE STATIONS -->
+    <g fill="none" stroke="#2563EB" stroke-width="1.1" opacity="0.50">
+      <polygon points="150,220 450,180 300,380"/>
+      <polygon points="450,180 800,350 300,380"/>
+      <polygon points="450,180 800,160 800,350"/>
+      <polygon points="800,160 1180,200 800,350"/>
+      <polygon points="1180,200 1450,240 1180,390 800,350"/>
+    </g>
+
+    <!-- CORS-TR Base Station Antenna (Center Ground) -->
+    <g transform="translate(800, 350)" stroke="#38BDF8">
+      <!-- Antenna Mast & Dome -->
+      <line x1="0" y1="0" x2="0" y2="-45" stroke-width="2.2"/>
+      <path d="M -15,-45 A 15,15 0 0,1 15,-45 Z" fill="#0EA5E9" opacity="0.8"/>
+      <!-- Concentric Signal Waves radiating from CORS Antenna -->
+      <circle cx="0" cy="-45" r="20" fill="none" stroke="#38BDF8" stroke-width="1" stroke-dasharray="2,3" opacity="0.6"/>
+      <circle cx="0" cy="-45" r="35" fill="none" stroke="#38BDF8" stroke-width="1" stroke-dasharray="3,4" opacity="0.4"/>
+      <circle cx="0" cy="-45" r="55" fill="none" stroke="#38BDF8" stroke-width="1" stroke-dasharray="4,5" opacity="0.25"/>
+    </g>
+
+    <!-- Nirengi & Geodetic Nodes -->
+    <g fill="#38BDF8">
+      <polygon points="150,210 157,225 143,225" fill="#0EA5E9"/>
+      <circle cx="150" cy="220" r="2" fill="#0F172A"/>
+
+      <polygon points="450,170 457,185 443,185" fill="#0EA5E9"/>
+      <circle cx="450" cy="180" r="2" fill="#0F172A"/>
+
+      <polygon points="300,370 307,385 293,385" fill="#0EA5E9"/>
+      <circle cx="300" cy="380" r="2" fill="#0F172A"/>
+
+      <polygon points="1180,190 1187,205 1173,205" fill="#0EA5E9"/>
+      <circle cx="1180" cy="200" r="2" fill="#0F172A"/>
+
+      <polygon points="1450,230 1457,245 1443,245" fill="#0EA5E9"/>
+      <circle cx="1450" cy="240" r="2" fill="#0F172A"/>
+    </g>
+
+    <!-- Technical GNSS / CAD Surveying Monospace Labels -->
+    <g font-family="monospace" font-size="11" font-weight="bold" fill="#0284C7" opacity="0.85">
+      <text x="735" y="325">🛰️ CORS-TR ISTN [H: 142.85m]</text>
+      <text x="735" y="340">FIXED RTK ACC: ±0.008m</text>
+      
+      <text x="160" y="215">▲ P.101 [N: 428190.45 E: 4102800.12]</text>
+      <text x="460" y="175">▲ P.102 [N: 428750.80 E: 4103400.65]</text>
+      <text x="1190" y="195">▲ P.103 [N: 429300.20 E: 4103950.90]</text>
+
+      <text x="270" y="55">SATELLITE GNSS-GPS L1/L2/L5</text>
+      <text x="1270" y="65">GLONASS/GALILEO TRACKING</text>
+    </g>
+  </g>
+</svg>

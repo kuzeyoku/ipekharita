@@ -1,0 +1,38 @@
+<?php
+
+declare(strict_types=1);
+
+return [
+    'hero_title'           => 'Harita & Kadastro Uzmanlık Alanlarımız',
+    'hero_subtitle'        => '22/a kadastro yenilemeden 5-kameralı oblik 3D kent modellerine ve airborne LiDAR lazer taramaya.',
+    'scope_badge'          => 'Uygulama Alanı',
+    'scope_val'            => 'İl & İlçe Ölçeğinde',
+    'public_engineering'   => 'KAMU MÜHENDİSLİĞİ',
+    'faq_badge'            => 'TEKNİK SSS & İHALE REHBERİ',
+    'faq_title'            => 'Sıkça Sorulan Mühendislik Soruları',
+    'faq_subtitle'         => 'Kamu ihaleleri, 22/a kadastro yenileme mevzuatı ve 3D oblik fotogrametri süreçleri hakkında merak edilenler.',
+    'faq_1_q'              => '22/a Kadastro Yenileme Projelerinde Hangi Teknik Standartlar Uygulanır?',
+    'faq_1_a'              => '22/a Kadastro Yenileme ihalelerinde Tapu ve Kadastro Genel Müdürlüğü (TKGM) 2018/13 sayılı Genelgesi ve BÖHHBÜY (Büyük Ölçekli Harita ve Harita Bilgileri Üretim Yönetmeliği) esas alınır. Eski paftalardaki geometrik hatalar, CORS-TR GNSS ölçümleri ve yüksek çözünürlüklü İHA ortofotoları ile santimetre hassasiyetinde yenilenerek tapu kütüğüne tescil edilir.',
+    'faq_2_q'              => 'Oblik (Eğik) 3D Kent Modelleme ile Klasik Ortofoto Arasındaki Fark Nedir?',
+    'faq_2_a'              => 'Klasik ortofotolar sadece 90 derece dik açıdan tek kamera ile çekilir ve bina cephelerini gösteremez. 5-kameralı Oblik (Oblique) sistemler ise 1 dik ve 4 eğik açılı kamera ile aynı anda çekim yaparak binaların ve dokuların 3 boyutlu gerek cephe gerekse çatı dokusunu (CityGML LoD2 / LoD3) üreterek akıllı kent otomasyonuna veri sağlar.',
+    'faq_3_q'              => 'Airborne LiDAR Lazer Tarama Teknolojisinin Yoğun Bitki Örtüsünde Avantajı Nedir?',
+    'faq_3_a'              => 'Airborne LiDAR Lazer sistemi, saniyede 1 milyonun üzerinde lazer darbesi gönderir. Çoklu yankı (multi-echo) teknolojisi sayesinde lazer ışınları orman ve sık bitki örtüsü yapraklarının arasından sızarak doğrudan gerçek arazi zeminine (Bare Earth DEM) ulaşır ve fotogrametrinin yetersiz kaldığı sık ormanlık alanlarda hassas topoğrafya çıkarır.',
+    'faq_4_q'              => 'Karayolları ve TCDD Koridor Haritacılığında Teslimat Formatları Nelerdir?',
+    'faq_4_a'              => 'Koridor haritacılığı teslimatlarımız KGM ve TCDD teknik şartnamelerine tam uyumlu olarak AutoCAD DWG, Netcad NCD, MicroStation DGN, ArcGIS SHP ve 3D Nokta Bulutu (LAS/LAZ) formatlarında, eksiksiz veri sözlüğü ve kamulaştırma planları ile birlikte teslim edilmektedir.',
+    'application_areas'    => 'Sektörel Uygulama Alanları',
+    'app_area_1_title'     => 'Akıllı Şehir & MAKS 3D',
+    'app_area_1_sub'       => 'Belediyeler için 3D Kent Rehberi',
+    'app_area_2_title'     => 'Maden & Hafriyat Hacmi',
+    'app_area_2_sub'       => 'MAPEG uyumlu stok kürajı',
+    'app_area_3_title'     => 'Koridor Haritalama',
+    'app_area_3_sub'       => 'KGM & TCDD güzergah projeleri',
+    'app_area_4_title'     => 'Orman & 2/B Tespiti',
+    'app_area_4_sub'       => 'OGM kadastral sınır belirleme',
+    'faq_detail_1_q'       => 'Drone ile haritalama ne kadar sürede tamamlanır?',
+    'faq_detail_1_a'       => '100 hektarlık bir alanın uçuşu ve YKN ölçümleri 1 günde, 3D veri işleme ve ortofoto haritası teslimatı ise 2-3 iş gününde tamamlanır.',
+    'faq_detail_2_q'       => 'Hangi formatlarda teslimat yapıyorsunuz?',
+    'faq_detail_2_a'       => 'Ortofoto için GeoTIFF, ECW; 3D Nokta Bulutu için LAS/LAZ, OBJ, PLY; Vektör çizimler için CAD (DWG/DXF) ve GIS (SHP/KML) formatlarında teslim edilmektedir.',
+    'consult_title'        => 'Projeniz İçin Danışın',
+    'consult_desc'         => 'Uzman harita mühendislerimiz arazi ve ihale yapınıza en uygun haritalama çözümü için hazır.',
+    'call_now'             => 'Hemen Arayın',
+];

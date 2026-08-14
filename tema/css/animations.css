@@ -1,0 +1,351 @@
+/* ============================================================
+   İPEK MÜHENDİSLİK — ANIMATIONS.CSS
+   Scroll Reveal, Entrance Animations, Keyframes
+   ============================================================ */
+
+/* ── Scroll Reveal Base ────────────────────────────────────── */
+[data-reveal] {
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: opacity, transform;
+}
+
+[data-reveal].revealed {
+    opacity: 1;
+    transform: none !important;
+}
+
+/* Directions */
+[data-reveal="up"] {
+    transform: translateY(40px);
+}
+
+[data-reveal="down"] {
+    transform: translateY(-40px);
+}
+
+[data-reveal="left"] {
+    transform: translateX(-40px);
+}
+
+[data-reveal="right"] {
+    transform: translateX(40px);
+}
+
+[data-reveal="zoom"] {
+    transform: scale(0.92);
+}
+
+[data-reveal="fade"] {
+    transform: none;
+}
+
+/* Delay Utilities */
+[data-delay="100"] { transition-delay: 100ms; }
+[data-delay="200"] { transition-delay: 200ms; }
+[data-delay="300"] { transition-delay: 300ms; }
+[data-delay="400"] { transition-delay: 400ms; }
+[data-delay="500"] { transition-delay: 500ms; }
+[data-delay="600"] { transition-delay: 600ms; }
+[data-delay="700"] { transition-delay: 700ms; }
+[data-delay="800"] { transition-delay: 800ms; }
+
+
+/* ── Hero Animations ───────────────────────────────────────── */
+@keyframes heroFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-animate {
+    animation: heroFadeUp 0.9s ease forwards;
+}
+
+.hero-animate-delay-1 { animation-delay: 0.2s; opacity: 0; }
+.hero-animate-delay-2 { animation-delay: 0.4s; opacity: 0; }
+.hero-animate-delay-3 { animation-delay: 0.6s; opacity: 0; }
+.hero-animate-delay-4 { animation-delay: 0.8s; opacity: 0; }
+
+/* Scroll down indicator */
+@keyframes scrollBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    animation: scrollBounce 2s ease-in-out infinite;
+}
+
+.scroll-indicator i {
+    font-size: 1.2rem;
+}
+
+
+/* ── Slider Animations ─────────────────────────────────────── */
+@keyframes slideProgressBar {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.hero-slide .slide-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 8s ease;
+}
+
+.hero-slide.active .slide-bg {
+    transform: scale(1.06);
+}
+
+/* Slider dots */
+.hero-dots {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 5;
+}
+
+.hero-dot {
+    width: 36px;
+    height: 4px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-dot.active {
+    background: rgba(255, 255, 255, 0.3);
+    width: 56px;
+}
+
+.hero-dot .dot-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: var(--accent);
+    border-radius: 4px;
+    width: 0;
+}
+
+.hero-dot.active .dot-progress {
+    animation: slideProgressBar 6s linear forwards;
+}
+
+
+/* ── Floating Elements ─────────────────────────────────────── */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+@keyframes floatSlow {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-8px) rotate(2deg); }
+}
+
+.float-anim {
+    animation: float 4s ease-in-out infinite;
+}
+
+.float-anim-slow {
+    animation: floatSlow 6s ease-in-out infinite;
+}
+
+
+/* ── Counter Animation ─────────────────────────────────────── */
+.counter-value {
+    display: inline-block;
+}
+
+
+/* ── Gradient Border Animation ─────────────────────────────── */
+@keyframes borderGlow {
+    0%, 100% { border-color: var(--secondary); }
+    50% { border-color: var(--accent); }
+}
+
+
+/* ── Particle / Decorative Shapes ──────────────────────────── */
+.decor-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(var(--secondary-rgb), 0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.decor-circle--lg {
+    width: 400px;
+    height: 400px;
+}
+
+.decor-circle--md {
+    width: 250px;
+    height: 250px;
+}
+
+.decor-circle--sm {
+    width: 150px;
+    height: 150px;
+}
+
+/* Tech section grid anim */
+@keyframes gridPulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.6; }
+}
+
+/* Loading screen */
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: var(--z-loading);
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.page-loader.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+/* ── Minimal Trinity F90+ Fixed-Wing VTOL Drone Animation ─────────────── */
+
+@keyframes trinityFlyPath {
+    0% {
+        transform: translate(-12vw, 0px) rotate(4deg) scale(0.85);
+        opacity: 0.35;
+    }
+    20% {
+        transform: translate(14vw, -25px) rotate(-4deg) scale(0.88);
+        opacity: 0.5;
+    }
+    40% {
+        transform: translate(38vw, 0px) rotate(3deg) scale(0.92);
+        opacity: 0.45;
+    }
+    60% {
+        transform: translate(62vw, 25px) rotate(-3deg) scale(0.88);
+        opacity: 0.5;
+    }
+    80% {
+        transform: translate(86vw, 0px) rotate(4deg) scale(0.85);
+        opacity: 0.4;
+    }
+    100% {
+        transform: translate(110vw, 0px) rotate(-2deg) scale(0.82);
+        opacity: 0.3;
+    }
+}
+
+.trinity-f90-drone-bg {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 160px;
+    height: 100px;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.45;
+    animation: trinityFlyPath 22s linear infinite;
+}
+
+/* Subtle Flight Route Path SVG Line */
+.trinity-route-line {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    opacity: 0.28;
+    pointer-events: none;
+    z-index: 1;
+    background: transparent !important;
+}
+
+/* Interactive TIN Triangulated Mesh Canvas */
+.tin-mesh-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.35;
+}
+
+/* Animated Wireframe CAD Panning Grid */
+@keyframes wireframePan {
+    0% { background-position: 0 0; }
+    100% { background-position: 72px 72px; }
+}
+
+.bg-wireframe-animated {
+    background: #FFFFFF linear-gradient(90deg, rgba(37, 99, 235, 0.025) 1px, transparent 1px),
+                linear-gradient(180deg, rgba(37, 99, 235, 0.025) 1px, transparent 1px);
+    background-size: 36px 36px;
+    animation: wireframePan 22s linear infinite;
+}
+

@@ -1,0 +1,38 @@
+<?php
+
+declare(strict_types=1);
+
+return [
+    'hero_title'           => 'Surveying & Cadastral Specializations',
+    'hero_subtitle'        => 'From 22/a cadastral renewal to 5-camera oblique 3D urban models and airborne LiDAR scanning.',
+    'scope_badge'          => 'Application Scope',
+    'scope_val'            => 'City & District Scale',
+    'public_engineering'   => 'PUBLIC ENGINEERING',
+    'faq_badge'            => 'TECHNICAL FAQ & TENDER GUIDE',
+    'faq_title'            => 'Frequently Asked Engineering Questions',
+    'faq_subtitle'         => 'Key information regarding public tenders, 22/a cadastral regulations, and 3D oblique photogrammetry.',
+    'faq_1_q'              => 'What technical standards apply to 22/a Cadastral Renewal projects?',
+    'faq_1_a'              => 'Projects comply with General Directorate of Land Registry and Cadastre (TKGM) Circular 2018/13 and Large-Scale Mapping Regulations (BOHHBUY). Geometric legacy distortions are renewed with centimeter accuracy via CORS-TR GNSS and UAV orthophotos.',
+    'faq_2_q'              => 'What is the difference between Oblique 3D Urban Modeling and Classic Orthophoto?',
+    'faq_2_a'              => 'Classic orthophotos only capture from a 90-degree nadir perspective. 5-camera Oblique systems capture 1 vertical and 4 diagonal angles simultaneously, generating photorealistic 3D building facades and roof meshes (CityGML LoD2 / LoD3) for smart city GIS.',
+    'faq_3_q'              => 'What is the advantage of Airborne LiDAR in dense vegetation?',
+    'faq_3_a'              => 'Airborne LiDAR fires over 1 million laser pulses per second. Using multi-echo technology, laser pulses penetrate tree canopies to calculate true bare-earth digital elevation models (DEM) where photogrammetry is constrained.',
+    'faq_4_q'              => 'What are the delivery formats for Highway and Railway Corridor Mapping?',
+    'faq_4_a'              => 'Deliverables comply with KGM and TCDD technical specs, delivered in AutoCAD DWG, Netcad NCD, MicroStation DGN, ArcGIS SHP, and 3D Point Cloud (LAS/LAZ) formats with complete data dictionaries and expropriation plans.',
+    'application_areas'    => 'Sectoral Application Areas',
+    'app_area_1_title'     => 'Smart City & MAKS 3D',
+    'app_area_1_sub'       => '3D Urban Guide for Municipalities',
+    'app_area_2_title'     => 'Mining & Earthwork Volume',
+    'app_area_2_sub'       => 'Stockpile volume calculation',
+    'app_area_3_title'     => 'Corridor Mapping',
+    'app_area_3_sub'       => 'Highway & Railway route surveys',
+    'app_area_4_title'     => 'Forestry & Boundary Surveys',
+    'app_area_4_sub'       => 'OGM cadastral boundary demarcation',
+    'faq_detail_1_q'       => 'How long does UAV surveying take?',
+    'faq_detail_1_a'       => 'Flight and GCP surveys for a 100-hectare area take 1 day; 3D data processing and orthophoto map delivery take 2-3 business days.',
+    'faq_detail_2_q'       => 'Which file formats do you deliver?',
+    'faq_detail_2_a'       => 'GeoTIFF, ECW for Orthophotos; LAS/LAZ, OBJ, PLY for 3D Point Clouds; CAD (DWG/DXF) and GIS (SHP/KML) for vector line drawings.',
+    'consult_title'        => 'Consult for Your Project',
+    'consult_desc'         => 'Our survey engineers are ready to design the optimal mapping solution for your terrain and tender.',
+    'call_now'             => 'Call Now',
+];

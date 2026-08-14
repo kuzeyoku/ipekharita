@@ -1,0 +1,79 @@
+/* ============================================================
+   İPEK MÜHENDİSLİK — RESPONSIVE.CSS
+   Locked 1320px Container & Mobile Breakpoint Overrides
+   ============================================================ */
+
+/* ── Force 1320px Container on Desktop (1200px+) ──────────── */
+@media (min-width: 1200px) {
+    .container, 
+    .container-lg, 
+    .container-md, 
+    .container-sm, 
+    .container-xl, 
+    .container-xxl {
+        max-width: 1320px !important;
+    }
+}
+
+
+/* ── Laptop / Desktop (992px - 1199px) ─────────────────────── */
+@media (max-width: 1199.98px) {
+    :root {
+        --header-height: 80px;
+    }
+
+    h1 {
+        font-size: 2.6rem;
+    }
+}
+
+
+/* ── Tablet (768px - 991px) ────────────────────────────────── */
+@media (max-width: 991.98px) {
+    .topbar-enterprise {
+        display: none;
+    }
+
+    .nav-link-enterprise {
+        padding: 10px 0 !important;
+        font-size: 1.05rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-enterprise {
+        padding-top: 50px;
+        padding-bottom: 60px;
+    }
+}
+
+
+/* ── Mobile (576px - 767px) ────────────────────────────────── */
+@media (max-width: 767.98px) {
+    h1 {
+        font-size: 1.9rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .btn-enterprise {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+/* ── Small Mobile (< 576px) ────────────────────────────────── */
+@media (max-width: 575.98px) {
+    h1 {
+        font-size: 1.65rem;
+    }
+
+    h2 {
+        font-size: 1.45rem;
+    }
+}

@@ -1,0 +1,1418 @@
+/* ============================================================
+   İPEK MÜHENDİSLİK — LIGHT ENTERPRISE COMPONENTS & AGENCY BADGES
+   Sleek Compact Header Navigation & Pixel-Perfect Uniform Scale
+   ============================================================ */
+
+/* ── Topbar (Compact & Sleek) ────────────────────────────── */
+.topbar-enterprise {
+    background: var(--primary);
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.82rem;
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.topbar-enterprise a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+}
+.topbar-enterprise a:hover {
+    color: #38BDF8;
+}
+
+/* ── Fixed Position Enterprise Header System ─────────────────── */
+.site-header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1050;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body {
+    padding-top: 98px;
+}
+
+@media (max-width: 991.98px) {
+    body {
+        padding-top: 64px;
+    }
+}
+
+.site-header-fixed.header-scrolled {
+    transform: translateY(-34px);
+}
+
+@media (max-width: 991.98px) {
+    .site-header-fixed.header-scrolled {
+        transform: translateY(0);
+    }
+}
+
+.navbar-floating-container {
+    position: relative;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border-light);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.site-header-fixed.header-scrolled .navbar-floating-container,
+.navbar-floating-container.navbar-scrolled {
+    background: #FFFFFF;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.09);
+    border-bottom-color: rgba(226, 232, 240, 0.9);
+}
+
+.navbar-floating-container nav.navbar {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+.navbar-brand-enterprise {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.brand-icon-square {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-blue));
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font-size: 1.15rem;
+    box-shadow: 0 4px 10px rgba(30, 58, 138, 0.2);
+}
+
+.brand-title-main {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--primary);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.brand-subtitle-main {
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* Nav links (Compact Sleek Scale with Icons) */
+.nav-link-enterprise {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    padding: 6px 14px;
+    border-radius: var(--radius-pill);
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.nav-link-enterprise i.nav-icon {
+    font-size: 0.84rem;
+    color: var(--text-muted);
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-link-enterprise:hover,
+.nav-link-enterprise.active {
+    color: var(--accent-blue);
+    background: rgba(37, 99, 235, 0.06);
+}
+
+.nav-link-enterprise:hover i.nav-icon,
+.nav-link-enterprise.active i.nav-icon {
+    color: var(--accent-blue);
+}
+
+/* ── Rich Enterprise Nav Dropdown Menu ─────────────────── */
+.dropdown-menu-enterprise {
+    background-color: #FFFFFF !important;
+    border: 1px solid var(--border-light) !important;
+    border-radius: 14px !important;
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.15) !important;
+    padding: 8px !important;
+    min-width: 290px;
+    z-index: 1055 !important;
+}
+
+.dropdown-item-enterprise {
+    display: flex;
+    align-items: center;
+    padding: 9px 14px !important;
+    font-size: 0.86rem !important;
+    font-weight: 600 !important;
+    color: var(--text-primary) !important;
+    border-radius: 10px !important;
+    transition: all 0.2s ease !important;
+}
+
+.dropdown-item-enterprise:hover {
+    background-color: rgba(37, 99, 235, 0.08) !important;
+    color: var(--accent-blue) !important;
+    transform: translateX(4px);
+}
+
+.dropdown-item-enterprise i {
+    width: 22px;
+    text-align: center;
+    font-size: 0.95rem;
+    transition: transform 0.2s ease;
+}
+
+.dropdown-item-enterprise:hover i {
+    transform: scale(1.15);
+}
+
+/* Hover and Bootstrap .show trigger for nav dropdown */
+.nav-item.dropdown:hover > .dropdown-menu-enterprise,
+.dropdown-menu-enterprise.show {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+}
+
+@media (min-width: 992px) {
+    .dropdown-menu-enterprise {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(8px);
+        transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+        margin-top: 8px !important;
+    }
+}
+
+/* Buttons */
+.btn-enterprise {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 22px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.88rem;
+    border-radius: var(--radius-pill);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-enterprise-sm {
+    padding: 8px 18px;
+    font-size: 0.84rem;
+}
+
+.btn-enterprise-primary {
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-blue));
+    color: #FFFFFF;
+    box-shadow: var(--shadow-blue-glow);
+}
+
+.btn-enterprise-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.28);
+    color: #FFFFFF;
+}
+
+.btn-enterprise-outline {
+    background: #FFFFFF;
+    border: 1.5px solid var(--border-light);
+    color: var(--primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-enterprise-outline:hover {
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Premium Enterprise Detail Button & Card Link */
+.btn-detail-enterprise {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(37, 99, 235, 0.06);
+    border: 1px solid rgba(37, 99, 235, 0.18);
+    border-radius: var(--radius-pill);
+    color: var(--accent-blue);
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-detail-enterprise i {
+    transition: transform 0.25s ease;
+}
+
+.btn-detail-enterprise:hover {
+    background: var(--accent-blue);
+    border-color: var(--accent-blue);
+    color: #FFFFFF;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+    transform: translateY(-2px);
+}
+
+.btn-detail-enterprise:hover i {
+    transform: translateX(4px);
+}
+
+/* ── Public Agency Compliance Badges ──────────────────────── */
+.agency-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: var(--radius-pill);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.agency-tag-tkgm { background: rgba(30, 58, 138, 0.1); color: #1E3A8A; border: 1px solid rgba(30, 58, 138, 0.25); }
+.agency-tag-kgm { background: rgba(217, 119, 6, 0.1); color: #B45309; border: 1px solid rgba(217, 119, 6, 0.25); }
+.agency-tag-dsi { background: rgba(2, 132, 199, 0.1); color: #0284C7; border: 1px solid rgba(2, 132, 199, 0.25); }
+.agency-tag-ogm { background: rgba(16, 185, 129, 0.1); color: #047857; border: 1px solid rgba(16, 185, 129, 0.25); }
+.agency-tag-nvi { background: rgba(124, 58, 237, 0.1); color: #6D28D9; border: 1px solid rgba(124, 58, 237, 0.25); }
+.agency-tag-mapeg { background: rgba(225, 29, 72, 0.1); color: #BE123C; border: 1px solid rgba(225, 29, 72, 0.25); }
+
+/* ── Light Bento Grid Architecture ───────────────────────── */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+}
+
+.bento-col-8 { grid-column: span 8; }
+.bento-col-4 { grid-column: span 4; }
+.bento-col-6 { grid-column: span 6; }
+
+@media (max-width: 991px) {
+    .bento-col-8, .bento-col-4, .bento-col-6 { grid-column: span 12; }
+}
+
+.bento-card-light {
+    background: #FFFFFF;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    padding: 32px;
+    transition: all 0.35s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.bento-card-light:hover {
+    border-color: rgba(37, 99, 235, 0.3);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+}
+
+.bento-card-hero-light {
+    background: linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 100%);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+.bento-icon-light {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radius-md);
+    background: rgba(37, 99, 235, 0.08);
+    border: 1px solid rgba(37, 99, 235, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-blue);
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+}
+
+.bento-card-light:hover .bento-icon-light {
+    background: var(--accent-blue);
+    color: #FFFFFF;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+/* ============================================================
+   ENTERPRISE SUBPAGE HEADER & BREADCRUMB BANNER SYSTEM
+   Modern, crisp, scalable architectural design system
+   ============================================================ */
+
+.subpage-header-banner {
+    position: relative;
+    padding: 56px 0 48px;
+    background-color: #F8FAFC;
+    background-image: 
+        radial-gradient(circle at 75% 30%, rgba(37, 99, 235, 0.08) 0%, transparent 65%),
+        radial-gradient(circle at 20% 80%, rgba(2, 132, 199, 0.05) 0%, transparent 50%),
+        linear-gradient(90deg, rgba(37, 99, 235, 0.025) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(37, 99, 235, 0.025) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 36px 36px, 36px 36px;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.85);
+    overflow: hidden;
+}
+
+.subpage-header-banner .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Glassmorphism Breadcrumb Capsule Styling */
+.breadcrumb-enterprise {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 18px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(37, 99, 235, 0.18);
+    border-radius: var(--radius-pill);
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.06);
+    margin-bottom: 20px;
+    font-size: 0.86rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+}
+
+.breadcrumb-enterprise a {
+    color: #475569;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.breadcrumb-enterprise a:hover {
+    color: var(--primary-blue);
+    transform: translateY(-1px);
+}
+
+.breadcrumb-enterprise .breadcrumb-separator {
+    color: rgba(37, 99, 235, 0.4);
+    font-size: 0.68rem;
+}
+
+.breadcrumb-enterprise .breadcrumb-active {
+    color: var(--primary-blue);
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.subpage-title {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: clamp(2rem, 4.5vw, 2.8rem);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: var(--text-primary);
+}
+
+/* Custom Varied Section Backgrounds for Home Page & Portals */
+.bg-section-slate {
+    background: #F8FAFC;
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.bg-section-grid {
+    background: #FFFFFF linear-gradient(90deg, rgba(37, 99, 235, 0.035) 1px, transparent 1px),
+                linear-gradient(180deg, rgba(37, 99, 235, 0.035) 1px, transparent 1px);
+    background-size: 36px 36px;
+}
+
+.bg-section-dark-tech {
+    background-color: #0F172A;
+    background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.93) 0%, rgba(11, 19, 41, 0.96) 100%), url('../img/footer-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #FFFFFF;
+    padding: 90px 0;
+}
+
+.bg-section-dark-tech .container {
+    position: relative;
+    z-index: 2;
+}
+
+.bg-section-dark-tech h2,
+.bg-section-dark-tech h3,
+.bg-section-dark-tech h4,
+.bg-section-dark-tech .h3,
+.bg-section-dark-tech .h4 {
+    color: #FFFFFF !important;
+}
+
+.bg-section-dark-tech p,
+.bg-section-dark-tech .text-secondary {
+    color: #CBD5E1 !important;
+}
+
+.bg-section-contour-light {
+    background-color: #F8FAFC;
+    background-image: url('../img/contour-pattern.svg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #2563EB;
+    position: relative;
+    padding: 90px 0;
+}
+
+.bg-section-contour-light::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(248, 250, 252, 0.90) 0%, rgba(248, 250, 252, 0.82) 50%, rgba(248, 250, 252, 0.90) 100%);
+    z-index: 1;
+}
+
+.bg-section-contour-light .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Project Card Vector Image Container */
+.project-img-wrapper {
+    height: 210px;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--border-light);
+    overflow: hidden;
+}
+
+.project-img-wrapper img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.card-enterprise:hover .project-img-wrapper img {
+    transform: scale(1.05);
+}
+
+/* Call to Action Enterprise Glow */
+.cta-enterprise {
+    background-color: #0F172A !important;
+    background-image: linear-gradient(135deg, #0F172A 0%, #1E3A8A 100%) !important;
+    position: relative;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    padding: 60px 45px;
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.3);
+    color: #FFFFFF !important;
+}
+
+.cta-enterprise > * {
+    position: relative;
+    z-index: 2;
+}
+
+.cta-enterprise h2,
+.cta-enterprise h3,
+.cta-enterprise h4 {
+    color: #FFFFFF !important;
+    font-weight: 800 !important;
+}
+
+.cta-enterprise p,
+.cta-enterprise .text-slate-200 {
+    color: #E2E8F0 !important;
+}
+
+.cta-enterprise .btn-warning-enterprise {
+    background-color: #F59E0B !important;
+    color: #0F172A !important;
+    font-weight: 700 !important;
+    border: none !important;
+    padding: 14px 28px !important;
+    border-radius: var(--radius-pill) !important;
+    box-shadow: 0 6px 18px rgba(245, 158, 11, 0.35) !important;
+    transition: all 0.25s ease !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.cta-enterprise .btn-warning-enterprise:hover {
+    background-color: #D97706 !important;
+    color: #FFFFFF !important;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(245, 158, 11, 0.5) !important;
+}
+
+.subpage-header-banner h1,
+.subpage-header-banner .subpage-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.1rem, 3.6vw, 3.0rem);
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+}
+
+/* Big Scale Track Record Box */
+.stat-box-large {
+    background: #FFFFFF;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: 24px 18px;
+    box-shadow: var(--shadow-sm);
+}
+
+.stat-number-large {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 2.4rem;
+    color: var(--primary-blue);
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.stat-label-large {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+/* Footer Ultra-Premium Dark Enterprise with Multi-Layered Vector City Skyline (Referans Görsel Tarzı) */
+.footer-enterprise {
+    background-color: #070D1B;
+    background-image: radial-gradient(circle at 50% 0%, rgba(30, 58, 138, 0.35) 0%, transparent 75%),
+                      radial-gradient(circle at 85% 80%, rgba(56, 189, 248, 0.15) 0%, transparent 65%),
+                      url('../img/footer-cad-pattern.svg');
+    background-position: center center, center center, center center;
+    background-size: cover, cover, cover;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 85px 0 35px;
+    border-top: 3px solid rgba(56, 189, 248, 0.5);
+    box-shadow: inset 0 20px 40px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.footer-enterprise::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(7, 13, 27, 0.65) 0%, rgba(7, 13, 27, 0.40) 60%, rgba(15, 23, 42, 0.20) 100%);
+    backdrop-filter: blur(2.5px);
+    -webkit-backdrop-filter: blur(2.5px);
+    z-index: 1;
+}
+
+/* Backup CAD Pattern Footer (Easy Revert) */
+.footer-cad-backup {
+    background-image: radial-gradient(circle at 15% 30%, rgba(14, 165, 233, 0.12) 0%, transparent 60%),
+                      radial-gradient(circle at 85% 70%, rgba(37, 99, 235, 0.15) 0%, transparent 65%),
+                      url('../img/footer-cad-pattern.svg');
+}
+
+.footer-enterprise .container {
+    position: relative;
+    z-index: 2;
+}
+
+.footer-enterprise h5 {
+    color: #FFFFFF;
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    letter-spacing: -0.01em;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-enterprise h5::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 32px;
+    height: 3px;
+    background: var(--accent-blue);
+    border-radius: 2px;
+}
+
+.footer-enterprise p.footer-desc {
+    color: #CBD5E1 !important;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 24px;
+    font-weight: 400;
+}
+
+/* Footer Link Styling & Icon Spacing */
+.footer-tech-links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.footer-tech-links li {
+    list-style: none;
+}
+
+.footer-tech-links li a {
+    color: #E2E8F0;
+    font-size: 0.94rem;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.25s ease;
+}
+
+.footer-tech-links li a i {
+    color: var(--accent-blue);
+    font-size: 0.72rem;
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.footer-tech-links li a:hover {
+    color: #38BDF8;
+    transform: translateX(5px);
+}
+
+.footer-tech-links li a:hover i {
+    color: #38BDF8;
+    transform: translateX(3px);
+}
+
+/* Contact Info Item Spacing & Contrast */
+.footer-contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.footer-contact-list li {
+    color: #E2E8F0;
+    font-size: 0.94rem;
+    font-weight: 500;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    line-height: 1.6;
+}
+
+.footer-contact-list li i {
+    color: #38BDF8;
+    font-size: 1.05rem;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+/* Social Buttons */
+.footer-social-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #FFFFFF;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-social-btn:hover {
+    background: var(--accent-blue);
+    border-color: var(--accent-blue);
+    color: #FFFFFF;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+}
+
+/* ============================================================
+   NEW ENTERPRISE UI MODULES & COMPONENTS
+   ============================================================ */
+
+/* 1. Global Scroll Progress Indicator */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, #2563EB 0%, #38BDF8 50%, #F59E0B 100%);
+    z-index: 99999;
+    transition: width 0.1s linear;
+}
+
+/* 2. Floating Back to Top Capsule */
+#back-to-top {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 46px;
+    height: 46px;
+    border-radius: var(--radius-pill);
+    background: rgba(15, 23, 42, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    color: #38BDF8;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#back-to-top.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#back-to-top:hover {
+    background: var(--primary-blue);
+    border-color: var(--primary-blue);
+    color: #FFFFFF;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(37, 99, 235, 0.45);
+}
+
+/* 3. Glassmorphism Metric Stats Cards */
+.stat-card-enterprise {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(37, 99, 235, 0.12);
+    border-radius: var(--radius-lg);
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card-enterprise::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-blue), var(--accent-blue));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.stat-card-enterprise:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(37, 99, 235, 0.12);
+    border-color: rgba(37, 99, 235, 0.25);
+}
+
+.stat-card-enterprise:hover::before {
+    opacity: 1;
+}
+
+.stat-card-number {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: clamp(2.2rem, 3.8vw, 3rem);
+    line-height: 1;
+    color: var(--primary-blue);
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+}
+
+.stat-card-label {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.stat-card-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* 4. Technical Engineering FAQ Accordion */
+.accordion-enterprise {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.accordion-item-enterprise {
+    background: #FFFFFF;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+}
+
+.accordion-item-enterprise.active {
+    border-color: var(--primary-blue);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.08);
+}
+
+.accordion-header-enterprise {
+    padding: 22px 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--text-primary);
+    user-select: none;
+    transition: color 0.25s ease;
+}
+
+.accordion-header-enterprise:hover {
+    color: var(--primary-blue);
+}
+
+.accordion-icon-enterprise {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #F1F5F9;
+    color: var(--primary-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.accordion-item-enterprise.active .accordion-icon-enterprise {
+    background: var(--primary-blue);
+    color: #FFFFFF;
+    transform: rotate(180deg);
+}
+
+.accordion-body-enterprise {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), padding 0.35s ease;
+    padding: 0 26px;
+    color: var(--text-secondary);
+    font-size: 0.96rem;
+    line-height: 1.7;
+}
+
+.accordion-item-enterprise.active .accordion-body-enterprise {
+    padding: 0 26px 24px 26px;
+}
+
+/* 5. Project Filter Pills & Tech Badges */
+.filter-pills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-pill-enterprise {
+    padding: 10px 22px;
+    border-radius: var(--radius-pill);
+    background: #FFFFFF;
+    border: 1px solid var(--border-light);
+    color: var(--text-secondary);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.filter-pill-enterprise:hover {
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.1);
+}
+
+.filter-pill-enterprise.active {
+    background: var(--primary-blue);
+    border-color: var(--primary-blue);
+    color: #FFFFFF;
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+}
+
+.tech-badge-enterprise {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: var(--radius-pill);
+    background: rgba(37, 99, 235, 0.08);
+    color: var(--primary-blue);
+    font-size: 0.78rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+/* 6. Service Selection Chips & Enterprise Form Controls */
+.chip-select-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.chip-select-enterprise {
+    padding: 10px 18px;
+    border-radius: var(--radius-pill);
+    background: #F8FAFC;
+    border: 1px solid var(--border-light);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    user-select: none;
+}
+
+.chip-select-enterprise:hover {
+    border-color: var(--accent-blue);
+    color: var(--primary-blue);
+}
+
+.chip-select-enterprise.selected {
+    background: rgba(37, 99, 235, 0.1);
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+
+.form-control-enterprise {
+    background: #FFFFFF;
+    border: 1px solid #CBD5E1;
+    border-radius: var(--radius-md);
+    padding: 12px 18px;
+    font-size: 0.96rem;
+    color: var(--text-primary);
+    transition: all 0.25s ease;
+}
+
+.form-control-enterprise:focus {
+    background: #FFFFFF;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+    outline: none;
+}
+
+/* ============================================================
+   ULTRA-PREMIUM ENTERPRISE MODULES
+   ============================================================ */
+
+/* 1. Live Operation Pulse Badges */
+.badge-pulse-green,
+.badge-pulse-blue,
+.badge-pulse-dark {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: var(--radius-pill);
+    font-size: 0.78rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.badge-pulse-green {
+    background: rgba(16, 185, 129, 0.12);
+    color: #059669;
+    border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.badge-pulse-blue {
+    background: rgba(37, 99, 235, 0.12);
+    color: #2563EB;
+    border: 1px solid rgba(37, 99, 235, 0.25);
+}
+
+.badge-pulse-dark {
+    background: rgba(15, 23, 42, 0.08);
+    color: #334155;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.pulse-dot-green,
+.pulse-dot-blue,
+.pulse-dot-dark {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.pulse-dot-green {
+    background: #10B981;
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    animation: pulseGreen 1.8s infinite;
+}
+
+.pulse-dot-blue {
+    background: #2563EB;
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7);
+    animation: pulseBlue 1.8s infinite;
+}
+
+.pulse-dot-dark {
+    background: #64748B;
+}
+
+@keyframes pulseGreen {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    }
+}
+
+@keyframes pulseBlue {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 8px rgba(37, 99, 235, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+    }
+}
+
+/* 2. Interactive 22/a Kadastro Before / After Comparison Slider */
+.compare-slider-wrapper {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    user-select: none;
+    background: #0F172A;
+}
+
+.compare-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.compare-before {
+    z-index: 1;
+    /* Legacy distorted pafta theme background */
+    background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+}
+
+.compare-after {
+    z-index: 2;
+    width: 50%;
+    overflow: hidden;
+    border-right: 2px solid #38BDF8;
+    box-shadow: 4px 0 25px rgba(56, 189, 248, 0.5);
+    /* Modern 22/a GIS vector cadastre theme background */
+    background: linear-gradient(135deg, #090D16 0%, #0F172A 100%);
+}
+
+.compare-after-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+}
+
+.compare-svg-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.compare-badge-before,
+.compare-badge-after {
+    position: absolute;
+    top: 24px;
+    padding: 8px 18px;
+    border-radius: var(--radius-pill);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+    z-index: 5;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.compare-badge-before {
+    right: 24px;
+    background: rgba(239, 68, 68, 0.9);
+    color: #FFFFFF;
+    backdrop-filter: blur(8px);
+}
+
+.compare-badge-after {
+    left: 24px;
+    background: rgba(16, 185, 129, 0.9);
+    color: #FFFFFF;
+    backdrop-filter: blur(8px);
+}
+
+.compare-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: #38BDF8;
+    z-index: 10;
+    cursor: ew-resize;
+    transform: translateX(-50%);
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.8);
+}
+
+.compare-handle-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 3px solid #38BDF8;
+    color: #0F172A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 3. Interactive Equipment Showcase Cards */
+.equip-card-enterprise {
+    background: #FFFFFF;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    border-radius: var(--radius-xl);
+    padding: 36px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    transition: all 0.35s ease;
+    height: 100%;
+}
+
+.equip-card-enterprise:hover {
+    transform: translateY(-6px);
+    border-color: rgba(37, 99, 235, 0.3);
+    box-shadow: 0 20px 45px rgba(37, 99, 235, 0.08);
+}
+
+.equip-icon-box {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-lg);
+    background: rgba(37, 99, 235, 0.08);
+    color: var(--primary-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+}
+
+.equip-card-enterprise:hover .equip-icon-box {
+    background: var(--primary-blue);
+    color: #FFFFFF;
+    transform: scale(1.05);
+}
+
+/* ============================================================
+   3 TIER-1 ENTERPRISE REPLACEMENT MODULES
+   ============================================================ */
+
+/* 1. 4-Step Enterprise Workflow Timeline */
+.workflow-step-card {
+    background: #FFFFFF;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    border-radius: var(--radius-xl);
+    padding: 32px 26px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    transition: all 0.35s ease;
+    height: 100%;
+}
+
+.workflow-step-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(37, 99, 235, 0.35);
+    box-shadow: 0 20px 45px rgba(37, 99, 235, 0.1);
+}
+
+.step-num-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2563EB 0%, #0284C7 100%);
+    color: #FFFFFF;
+    font-weight: 800;
+    font-size: 1.1rem;
+    font-family: var(--font-mono);
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.3);
+    margin-bottom: 20px;
+}
+
+.workflow-step-card:hover .step-num-badge {
+    background: linear-gradient(135deg, #0EA5E9 0%, #10B981 100%);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+}
+
+/* 2. Canlı İHA Telemetri & GIS Komuta Merkezi Dashboard */
+.telemetry-dashboard-card {
+    background: linear-gradient(145deg, #0F172A 0%, #1E293B 100%);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: var(--radius-xl);
+    padding: 40px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+.metric-value-glow {
+    font-family: var(--font-mono);
+    font-weight: 800;
+    color: #38BDF8;
+    text-shadow: 0 0 16px rgba(56, 189, 248, 0.4);
+}
+
+.metric-box-dark {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.metric-box-dark:hover {
+    border-color: rgba(56, 189, 248, 0.4);
+    transform: translateY(-3px);
+}
+
+/* 3. Resmi Kamu Mevzuat Uyum & Standartlar Matrisi */
+.standards-matrix-card {
+    background: #FFFFFF;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    border-radius: var(--radius-xl);
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.03);
+    transition: all 0.35s ease;
+    height: 100%;
+}
+
+.standards-matrix-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(16, 185, 129, 0.4);
+    box-shadow: 0 18px 40px rgba(16, 185, 129, 0.09);
+}
+
+.compliance-check-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(16, 185, 129, 0.12);
+    color: #10B981;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}

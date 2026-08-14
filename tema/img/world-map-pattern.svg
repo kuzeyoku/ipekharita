@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" width="100%" height="100%" preserveAspectRatio="none">
+  <defs>
+    <pattern id="gridDots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="currentColor" opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Matrix Dot Grid -->
+  <rect width="1000" height="500" fill="url(#gridDots)"/>
+
+  <!-- Lat / Long Parallels & Meridians -->
+  <g stroke="currentColor" stroke-width="0.8" stroke-dasharray="3 4" opacity="0.2">
+    <line x1="0" y1="125" x2="1000" y2="125"/>
+    <line x1="0" y1="250" x2="1000" y2="250"/> <!-- Equator -->
+    <line x1="0" y1="375" x2="1000" y2="375"/>
+    <line x1="166" y1="0" x2="166" y2="500"/>
+    <line x1="333" y1="0" x2="333" y2="500"/>
+    <line x1="500" y1="0" x2="500" y2="500"/> <!-- Prime Meridian -->
+    <line x1="666" y1="0" x2="666" y2="500"/>
+    <line x1="833" y1="0" x2="833" y2="500"/>
+  </g>
+
+  <!-- Authentic Geographic World Continents Vector Outlines -->
+  <g fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.2" opacity="0.7">
+    <!-- North America -->
+    <path d="M 50,60 L 90,40 L 140,30 L 180,35 L 230,20 L 280,35 L 300,60 L 260,80 L 290,120 L 250,140 L 220,130 L 230,170 L 200,190 L 160,210 L 180,240 L 160,260 L 150,230 L 120,200 L 90,210 L 80,180 L 110,160 L 100,130 L 70,120 L 50,90 Z M 270,30 L 320,15 L 330,40 L 290,45 Z"/>
+
+    <!-- South America -->
+    <path d="M 210,270 L 250,260 L 300,280 L 330,320 L 320,370 L 280,420 L 250,470 L 230,480 L 230,440 L 240,390 L 230,350 L 210,310 Z"/>
+
+    <!-- Greenland -->
+    <path d="M 330,25 L 380,15 L 430,25 L 410,65 L 360,75 L 340,55 Z"/>
+
+    <!-- Europe -->
+    <path d="M 460,110 L 490,95 L 530,90 L 570,80 L 610,95 L 600,125 L 570,130 L 550,150 L 520,145 L 490,155 L 460,140 L 470,125 Z M 475,85 L 495,80 L 490,90 Z M 465,100 L 475,105 L 465,115 Z"/>
+
+    <!-- Africa -->
+    <path d="M 450,165 L 490,160 L 560,160 L 620,195 L 610,250 L 570,290 L 540,340 L 520,380 L 490,360 L 480,310 L 450,270 L 430,220 L 440,185 Z M 615,280 L 630,275 L 625,320 L 615,310 Z"/>
+
+    <!-- Asia -->
+    <path d="M 610,95 L 660,70 L 730,60 L 800,65 L 880,75 L 940,90 L 920,130 L 870,140 L 880,180 L 830,170 L 810,210 L 760,210 L 750,250 L 720,240 L 710,190 L 670,180 L 640,210 L 610,180 L 620,140 L 600,125 Z"/>
+
+    <!-- Australia & Oceania -->
+    <path d="M 780,320 L 830,300 L 880,320 L 890,360 L 860,400 L 800,410 L 770,370 Z M 900,410 L 920,400 L 915,430 Z"/>
+  </g>
+
+  <!-- Geodetic Coordinate Target Pulse / Turkey -->
+  <g transform="translate(565, 135)">
+    <circle cx="0" cy="0" r="3.5" fill="#2563EB"/>
+    <circle cx="0" cy="0" r="11" stroke="#2563EB" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.7"/>
+  </g>
+</svg>

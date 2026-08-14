@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" width="240" height="160">
+  <defs>
+    <!-- Subtle Glow for High-Tech Laser Beam -->
+    <filter id="trinityLaserGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Trinity Body Gradients -->
+    <linearGradient id="trinityFuselage" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#F1F5F9"/>
+      <stop offset="100%" stop-color="#CBD5E1"/>
+    </linearGradient>
+
+    <linearGradient id="trinityWing" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#E2E8F0"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+
+    <linearGradient id="laserBeamGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(37, 99, 235, 0.4)"/>
+      <stop offset="100%" stop-color="rgba(56, 189, 248, 0.0)"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Downward Survey Laser Cone -->
+  <polygon points="120,80 50,155 190,155" fill="url(#laserBeamGrad)"/>
+  <line x1="120" y1="80" x2="50" y2="155" stroke="#2563EB" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.6"/>
+  <line x1="120" y1="80" x2="190" y2="155" stroke="#2563EB" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.6"/>
+
+  <!-- Trinity F90+ Swept Main Wings -->
+  <!-- Left Wing -->
+  <path d="M 95 72 L 20 28 C 15 25, 10 30, 14 36 L 108 82 Z" fill="url(#trinityWing)" stroke="#2563EB" stroke-width="1"/>
+  <path d="M 12 25 L 8 14 L 18 27 Z" fill="#2563EB"/> <!-- Left Winglet -->
+
+  <!-- Right Wing -->
+  <path d="M 95 84 L 20 128 C 15 131, 10 126, 14 120 L 108 74 Z" fill="url(#trinityWing)" stroke="#2563EB" stroke-width="1"/>
+  <path d="M 12 131 L 8 142 L 18 129 Z" fill="#2563EB"/> <!-- Right Winglet -->
+
+  <!-- Dual Rotor Booms (VTOL Mechanism) -->
+  <!-- Left Motor Boom -->
+  <rect x="55" y="42" width="75" height="4" rx="2" fill="#1E293B" stroke="#2563EB" stroke-width="0.5"/>
+  <ellipse cx="55" cy="44" rx="14" ry="3" fill="rgba(37, 99, 235, 0.35)" stroke="#38BDF8" stroke-width="0.5"/>
+  <ellipse cx="130" cy="44" rx="14" ry="3" fill="rgba(37, 99, 235, 0.35)" stroke="#38BDF8" stroke-width="0.5"/>
+
+  <!-- Right Motor Boom -->
+  <rect x="55" y="110" width="75" height="4" rx="2" fill="#1E293B" stroke="#2563EB" stroke-width="0.5"/>
+  <ellipse cx="55" cy="112" rx="14" ry="3" fill="rgba(37, 99, 235, 0.35)" stroke="#38BDF8" stroke-width="0.5"/>
+  <ellipse cx="130" cy="112" rx="14" ry="3" fill="rgba(37, 99, 235, 0.35)" stroke="#38BDF8" stroke-width="0.5"/>
+
+  <!-- Sleek Aerodynamic Center Fuselage Body -->
+  <path d="M 45 78 C 65 65, 155 65, 195 73 C 205 75, 210 78, 205 81 C 195 84, 150 91, 65 88 Z" fill="url(#trinityFuselage)" stroke="#1E3A8A" stroke-width="1.2"/>
+
+  <!-- Tail Unit Elevator -->
+  <path d="M 180 74 L 208 55 L 214 58 L 192 76 Z" fill="#1E3A8A"/>
+  <path d="M 180 82 L 208 101 L 214 98 L 192 80 Z" fill="#1E3A8A"/>
+
+  <!-- LiDAR Payload Optics Lens -->
+  <circle cx="120" cy="78" r="4" fill="#0284C7" stroke="#38BDF8" stroke-width="1" filter="url(#trinityLaserGlow)"/>
+
+  <!-- Navigation Lights -->
+  <circle cx="10" cy="19" r="2" fill="#EF4444"/> <!-- Red Port Light -->
+  <circle cx="10" cy="137" r="2" fill="#22C55E"/> <!-- Green Starboard Light -->
+</svg>

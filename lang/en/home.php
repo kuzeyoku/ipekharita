@@ -1,0 +1,36 @@
+<?php
+
+declare(strict_types=1);
+
+return [
+    'hero_badge'           => 'PUBLIC TENDERS & CITY-SCALE SURVEYING',
+    'hero_title'           => '22/a Cadastral Renewal & <span class="text-gradient-blue">3D Oblique City</span> Modeling',
+    'hero_subtitle'        => 'Our enterprise is a premier engineering contractor with an extensive track record delivering <strong>cadastral renewals</strong> across hundreds of thousands of hectares, airborne LiDAR laser scanning, and 5-camera UAV oblique digital twin photogrammetry.',
+    'btn_services'         => '9 Core Specializations',
+    'btn_projects'         => 'Public References',
+    'compliance_badge'     => 'PUBLIC REGULATION COMPLIANCE:',
+    'aerial_badge'         => 'Hundreds of Thousands of Hectares Aerial Photogrammetry',
+    'stat_1_val'           => '500',
+    'stat_1_lbl'           => 'Thousand Hectares Surveyed',
+    'stat_2_val'           => '150',
+    'stat_2_lbl'           => 'Public & Zoning Projects',
+    'metric_1_val'         => '500',
+    'metric_1_lbl'         => 'Hectares Cadastral Renewal',
+    'metric_2_val'         => '100',
+    'metric_2_lbl'         => 'M² 3D Oblique City Modeling',
+    'metric_3_val'         => '2500',
+    'metric_3_lbl'         => 'Km Corridor Mapping',
+    'metric_4_val'         => '20',
+    'metric_4_lbl'         => 'Years Engineering Experience',
+    'services_badge'       => 'OUR SPECIALIZATIONS',
+    'services_title'       => 'Large-Scale Engineering & Mapping Solutions',
+    'services_subtitle'    => 'Turnkey engineering services delivered to public institutions and metropolitan municipalities across Turkey.',
+    'projects_badge'       => 'PUBLIC REFERENCES & TRACK RECORD',
+    'projects_title'       => 'Featured Public Projects',
+    'projects_subtitle'    => 'Large-scale mapping tenders successfully delivered for TKGM, Highways, and Municipalities.',
+    'view_all_projects'    => 'Explore All Reference Projects',
+    'news_badge'           => 'TECHNICAL BLOG & REGULATIONS',
+    'news_title'           => 'Engineering & Cadastral Articles',
+    'news_subtitle'        => 'Technical articles on cadastral legislation, 3D city modeling, and LiDAR survey technologies.',
+    'view_all_posts'       => 'View All Technical Articles',
+];

@@ -1,0 +1,36 @@
+<?php
+
+declare(strict_types=1);
+
+return [
+    'hero_badge'           => 'KAMU İHALELERİ & ŞEHİR ÖLÇEĞİNDE HARİTACILIK',
+    'hero_title'           => '22/a Kadastro Yenileme Ve <span class="text-gradient-blue">Oblik 3D Kent</span> Modelleme',
+    'hero_subtitle'        => 'Firmamız; Türkiye genelinde yüz binlerce hektarlık alanda <strong>22/a kadastro yenileme</strong>, airborne LiDAR lazer tarama ve 5-kameralı İHA fotogrametrisi ile 3D kent modelleri üreten yüksek iş bitirme liyakatine sahip mühendislik yüklenicisidir.',
+    'btn_services'         => '9 Temel Uzmanlık Alanı',
+    'btn_projects'         => 'Kamu Referansları',
+    'compliance_badge'     => 'KAMU MEVZUAT UYUMLULUĞU:',
+    'aerial_badge'         => 'Yüz Binlerce Hektar Hava Fotogrametrisi',
+    'stat_1_val'           => '500',
+    'stat_1_lbl'           => 'Bin Hektar Haritalama',
+    'stat_2_val'           => '150',
+    'stat_2_lbl'           => 'Kamu & İmar Projesi',
+    'metric_1_val'         => '500',
+    'metric_1_lbl'         => 'Hektar 22/a Kadastro Alanı',
+    'metric_2_val'         => '100',
+    'metric_2_lbl'         => 'M² 3D Oblik Kent Modellemesi',
+    'metric_3_val'         => '2500',
+    'metric_3_lbl'         => 'Km Koridor Haritacılığı',
+    'metric_4_val'         => '20',
+    'metric_4_lbl'         => 'Yıllık Mühendislik Liyakati',
+    'services_badge'       => 'UZMANLIK ALANLARIMIZ',
+    'services_title'       => 'Büyük Ölçekli Mühendislik Ve Harita Çözümleri',
+    'services_subtitle'    => 'Türkiye genelinde kamu kurumları ve büyükşehir belediyelerine anahtar teslimi sunduğumuz temel mühendislik faaliyetleri.',
+    'projects_badge'       => 'KAMU REFERANSLARI & İŞ BİTİRMELER',
+    'projects_title'       => 'Öne Çıkan Kamu Projelerimiz',
+    'projects_subtitle'    => 'TKGM, Karayolları ve Belediyeler bünyesinde başarıyla tamamlanan yüksek ölçekli harita ihaleleri.',
+    'view_all_projects'    => 'Tüm Referans Projeleri İnceleyin',
+    'news_badge'           => 'TEKNİK BLOG & MEVZUAT',
+    'news_title'           => 'Mühendislik & Kadastro İncelemeleri',
+    'news_subtitle'        => 'Kadastro yenileme, 3D şehir modelleme ve LiDAR teknolojileri hakkında teknik makalelerimiz.',
+    'view_all_posts'       => 'Tüm Teknik Makaleleri Görün',
+];

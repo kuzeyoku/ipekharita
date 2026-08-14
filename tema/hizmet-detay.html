@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone Oblik Haritalama & 3D Kent Modelleme — İpek Mühendislik A.Ş.</title>
+    <meta name="description" content="Endüstriyel 5-kameralı İHA ile yüksek çözünürlüklü oblik hava fotoğrafı çekimi, 3D kent modeli, True Ortofoto ve NVİ MAKS 3D entegrasyonu.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Lexend:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- FAQ Structural Data for AI SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Drone ile Haritalama Ne Kadar Sürede Tamamlanır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "100 hektarlık bir alanın uçuş ve yer kontrol noktası (GCP) ölçümleri 1 günde, 3D veri işleme ve ortofoto haritası teslimatı 2-3 iş gününde tamamlanır."
+        }
+      },{
+        "@type": "Question",
+        "name": "Drone Haritasının Hassasiyeti Kaç Santimetredir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "RTK/PPK destekli endüstriyel insansız hava araçlarımız ve YKN bağlantılarımız ile X, Y koordinatlarında 1-2 cm, Z kot hassasiyetinde 2-3 cm doğruluk elde edilmektedir."
+        }
+      }]
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Fixed Enterprise Site Header -->
+    <header class="site-header-fixed">
+        <!-- Topbar -->
+        <div class="topbar-enterprise d-none d-lg-block">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center gap-4">
+                        <span><i class="fa-solid fa-building-flag text-warning me-2"></i><strong>Kamu & Altyapı Harita Yüklenicisi</strong> | Yüksek İş Bitirme Liyakati</span>
+                        <span><i class="fa-solid fa-location-dot me-1"></i> Merkez: Ankara | Türkiye Geneli Saha Operasyonları</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="tel:+903120000000"><i class="fa-solid fa-phone me-1"></i>+90 (312) 000 00 00</a>
+                        <a href="mailto:info@ipekmuhendislik.com.tr"><i class="fa-solid fa-envelope me-1"></i>info@ipekmuhendislik.com.tr</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Light Floating Capsule Navbar -->
+        <div class="navbar-floating-container">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg py-2">
+                    <a href="index.html" class="navbar-brand-enterprise">
+                        <div class="brand-icon-square"><i class="fa-solid fa-compass-drafting"></i></div>
+                        <div class="d-flex flex-column">
+                            <span class="brand-title-main">İPEK MÜHENDİSLİK</span>
+                            <span class="brand-subtitle-main">HARİTA • KADASTRO • 3D OBLİK</span>
+                        </div>
+                    </a>
+                    <button class="navbar-toggler border-0 p-2 ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-label="Menü">
+                        <i class="fa-solid fa-bars fs-3 text-primary"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navContent">
+                        <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
+                            <li class="nav-item">
+                                <a class="nav-link-enterprise" href="index.html">
+                                    <i class="fa-solid fa-house nav-icon"></i> Ana Sayfa
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link-enterprise" href="hakkimizda.html">
+                                    <i class="fa-solid fa-building nav-icon"></i> Kurumsal
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link-enterprise active dropdown-toggle d-inline-flex align-items-center gap-1" href="hizmetler.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-layer-group nav-icon"></i> Hizmetlerimiz
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-enterprise">
+                                    <li>
+                                        <a class="dropdown-item dropdown-item-enterprise" href="hizmetler.html">
+                                            <i class="fa-solid fa-shapes text-primary me-2"></i> Tüm Hizmetlerimiz
+                                        </a>
+                                    </li>
+                                    <li><hr class="dropdown-divider my-1"></li>
+                                    <li>
+                                        <a class="dropdown-item dropdown-item-enterprise" href="hizmet-detay.html">
+                                            <i class="fa-solid fa-map-location-dot text-primary me-2"></i> 22/a Kadastro Yenileme
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item dropdown-item-enterprise" href="hizmet-detay.html">
+                                            <i class="fa-solid fa-city text-primary me-2"></i> Oblik 3D Kent & Arazi Modelleme
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item dropdown-item-enterprise" href="hizmet-detay.html">
+                                            <i class="fa-solid fa-plane-up text-primary me-2"></i> Airborne LiDAR & Fotogrametri
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item dropdown-item-enterprise" href="hizmet-detay.html">
+                                            <i class="fa-solid fa-database text-primary me-2"></i> Coğrafi Bilgi Sistemleri (CBS)
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link-enterprise" href="projeler.html">
+                                    <i class="fa-solid fa-route nav-icon"></i> Projelerimiz
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link-enterprise" href="blog.html">
+                                    <i class="fa-solid fa-newspaper nav-icon"></i> Blog
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link-enterprise" href="iletisim.html">
+                                    <i class="fa-solid fa-paper-plane nav-icon"></i> İletişim
+                                </a>
+                            </li>
+                            <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                                <a href="iletisim.html" class="btn-enterprise btn-enterprise-primary btn-sm"><i class="fa-solid fa-file-contract"></i> Kurumsal Teklif Alın</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Header Banner -->
+    <section class="subpage-header-banner">
+        <div class="container text-center">
+            <nav class="breadcrumb-enterprise mb-3" aria-label="breadcrumb">
+                <a href="index.html"><i class="fa-solid fa-house me-1"></i> Ana Sayfa</a>
+                <i class="fa-solid fa-chevron-right breadcrumb-separator"></i>
+                <a href="hizmetler.html">Hizmetlerimiz</a>
+                <i class="fa-solid fa-chevron-right breadcrumb-separator"></i>
+                <span class="breadcrumb-active">3D Oblik Kent Modelleme</span>
+            </nav>
+            <h1 class="subpage-title mb-3">Drone Oblik Haritalama & <span class="text-gradient-blue">3D Kent Modelleme</span></h1>
+            <p class="lead text-secondary max-w-600 mx-auto mb-0" style="font-size:1.1rem;">5-kameralı endüstriyel İHA sistemi, True Ortofoto imalatı ve NVİ MAKS 3D entegrasyonu.</p>
+        </div>
+    </section>
+
+    <!-- Detail Content -->
+    <main class="py-5 mb-5">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Main Body -->
+                <div class="col-lg-8" data-reveal="left">
+                    <div class="card-enterprise p-3 mb-4 bg-light border text-center">
+                        <img src="img/hero/slide-2.png" alt="Drone Oblik 3D Haritalama" class="img-fluid rounded-4" style="max-height: 420px; object-fit: contain;">
+                    </div>
+
+                    <h2 class="h3 mb-3">Oblik Fotogrametri ile Şehir ve Arazilerin 3D Dijital İkizi</h2>
+                    <p class="lead text-secondary">Geleneksel dik (nadir) hava fotoğraflarının aksine, 5 farklı açıdan eş zamanlı çekim yapan oblik (eğik) kamera sistemlerimiz ile binaların cepheleri, bina altı detayları ve karmaşık arazi yapıları santimetre altı doğrulukta modellenir.</p>
+
+                    <p class="text-secondary">İpek Mühendislik A.Ş. olarak, insansız hava araçlarımızda taşıdığımız RTK/PPK modülleri ve yer kontrol noktaları (GCP) sayesinde Harita Genel Müdürlüğü ve TKGM standartlarına tam uyumlu sayısal yüzey modelleri (DSM), sayısal arazi modelleri (DTM) ve True Ortofoto ürünleri üretiyoruz.</p>
+
+                    <h3 class="h4 mt-5 mb-3">Sektörel Uygulama Alanları</h3>
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-6">
+                            <div class="p-3 bg-light border rounded-3 d-flex align-items-center gap-3">
+                                <i class="fa-solid fa-city text-primary fs-3"></i>
+                                <div>
+                                    <h6 class="mb-0">Akıllı Şehir & MAKS 3D</h6>
+                                    <small class="text-muted">Belediyeler için 3D Kent Rehberi</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-3 bg-light border rounded-3 d-flex align-items-center gap-3">
+                                <i class="fa-solid fa-mountain text-primary fs-3"></i>
+                                <div>
+                                    <h6 class="mb-0">Maden & Hafriyat Hacmi</h6>
+                                    <small class="text-muted">MAPEG uyumlu stok kürajı</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-3 bg-light border rounded-3 d-flex align-items-center gap-3">
+                                <i class="fa-solid fa-road text-primary fs-3"></i>
+                                <div>
+                                    <h6 class="mb-0">Koridor Haritalama</h6>
+                                    <small class="text-muted">KGM & TCDD güzergah projeleri</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-3 bg-light border rounded-3 d-flex align-items-center gap-3">
+                                <i class="fa-solid fa-tree text-primary fs-3"></i>
+                                <div>
+                                    <h6 class="mb-0">Orman & 2/B Tespiti</h6>
+                                    <small class="text-muted">OGM kadastral sınır belirleme</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Section -->
+                    <h3 class="h4 mt-5 mb-3">Sıkça Sorulan Sorular</h3>
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item border-0 mb-3 shadow-sm rounded-3 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    Drone ile haritalama ne kadar sürede tamamlanır?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-secondary">
+                                    100 hektarlık bir alanın uçuşu ve YKN ölçümleri 1 günde, 3D veri işleme ve ortofoto haritası teslimatı ise 2-3 iş gününde tamamlanır.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 mb-3 shadow-sm rounded-3 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Hangi formatlarda teslimat yapıyorsunuz?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-secondary">
+                                    Ortofoto için GeoTIFF, ECW; 3D Nokta Bulutu için LAS/LAZ, OBJ, PLY; Vektör çizimler için CAD (DWG/DXF) ve GIS (SHP/KML) formatlarında teslim edilmektedir.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4" data-reveal="right">
+                    <div class="card-enterprise p-4 mb-4">
+                        <h4 class="h5 mb-3">Diğer Hizmet Kollarımız</h4>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2"><a href="hizmet-detay.html" class="d-flex justify-content-between p-2 rounded text-dark text-decoration-none bg-light"><span class="fw-semibold">22/a Kadastro Yenileme</span> <i class="fa-solid fa-chevron-right text-muted"></i></a></li>
+                            <li class="mb-2"><a href="hizmet-detay.html" class="d-flex justify-content-between p-2 bg-primary text-white rounded text-decoration-none"><span class="fw-semibold">Oblik 3D Kent Modeli</span> <i class="fa-solid fa-chevron-right text-warning"></i></a></li>
+                            <li class="mb-2"><a href="hizmet-detay.html" class="d-flex justify-content-between p-2 rounded text-dark text-decoration-none bg-light"><span class="fw-semibold">Airborne LiDAR Tarama</span> <i class="fa-solid fa-chevron-right text-muted"></i></a></li>
+                            <li class="mb-2"><a href="hizmet-detay.html" class="d-flex justify-content-between p-2 rounded text-dark text-decoration-none bg-light"><span class="fw-semibold">Koridor Haritacılığı</span> <i class="fa-solid fa-chevron-right text-muted"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-primary text-white p-4 rounded-4 text-center" style="background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 100%);">
+                        <i class="fa-solid fa-headset text-warning fs-1 mb-3"></i>
+                        <h4>Projeniz İçin Danışın</h4>
+                        <p class="small text-white-50 mb-4">Uzman harita mühendislerimiz arazi ve ihale yapınıza en uygun haritalama çözümü için hazır.</p>
+                        <a href="iletisim.html" class="btn-enterprise btn-enterprise-primary bg-warning text-dark border-0 w-100 fw-bold"><i class="fa-solid fa-phone"></i> Hemen Arayın</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER ENTERPRISE -->
+    <footer class="footer-enterprise">
+        <div class="container">
+            <div class="row g-5 mb-5">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <div class="brand-icon-square" style="width:40px; height:40px;">
+                            <i class="fa-solid fa-compass-drafting fs-5"></i>
+                        </div>
+                        <span class="h4 mb-0 text-white font-heading fw-bold">İPEK MÜHENDİSLİK</span>
+                    </div>
+                    <p class="footer-desc">
+                        Türkiye genelinde 22/a kadastro yenileme, 5-kameralı oblik 3D kent modelleri, airborne LiDAR ve koridor haritacılığında yüksek iş bitirme liyakatine sahip mühendislik şirketi.
+                    </p>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="footer-social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="footer-social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <h5>Hızlı Bağlantılar</h5>
+                    <ul class="footer-tech-links">
+                        <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Ana Sayfa</a></li>
+                        <li><a href="hakkimizda.html"><i class="fa-solid fa-chevron-right"></i> Kurumsal</a></li>
+                        <li><a href="hizmetler.html"><i class="fa-solid fa-chevron-right"></i> Hizmetlerimiz</a></li>
+                        <li><a href="projeler.html"><i class="fa-solid fa-chevron-right"></i> Projelerimiz</a></li>
+                        <li><a href="iletisim.html"><i class="fa-solid fa-chevron-right"></i> İletişim</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <h5>Uzmanlık Alanları</h5>
+                    <ul class="footer-tech-links">
+                        <li><a href="hizmet-detay.html"><i class="fa-solid fa-chevron-right"></i> 22/a Kadastro Yenileme</a></li>
+                        <li><a href="hizmet-detay.html"><i class="fa-solid fa-chevron-right"></i> Oblik 3D Kent Modeli</a></li>
+                        <li><a href="hizmet-detay.html"><i class="fa-solid fa-chevron-right"></i> Airborne LiDAR & ENH</a></li>
+                        <li><a href="hizmet-detay.html"><i class="fa-solid fa-chevron-right"></i> Koridor Haritacılığı (KGM)</a></li>
+                        <li><a href="hizmet-detay.html"><i class="fa-solid fa-chevron-right"></i> Orman Kadastrosu & 2/B</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3">
+                    <h5>İletişim Bilgileri</h5>
+                    <ul class="footer-contact-list">
+                        <li><i class="fa-solid fa-location-dot"></i> <span>Merkez Mah. Mühendislik Cad. No:12 Çankaya / Ankara</span></li>
+                        <li><i class="fa-solid fa-phone"></i> <span>+90 (312) 000 00 00</span></li>
+                        <li><i class="fa-solid fa-envelope"></i> <span>info@ipekmuhendislik.com.tr</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-4 border-top border-secondary border-opacity-25 d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 small text-slate-400">
+                <p class="mb-0">© 2026 İpek Mühendislik A.Ş. Tüm Hakları Saklıdır.</p>
+                <div class="d-flex gap-3">
+                    <a href="kvkk.html" class="text-slate-400 text-decoration-none">KVKK Metni</a>
+                    <span class="text-secondary">|</span>
+                    <a href="gizlilik.html" class="text-slate-400 text-decoration-none">Gizlilik Politikası</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
