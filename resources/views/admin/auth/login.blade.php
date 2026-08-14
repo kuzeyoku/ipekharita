@@ -84,7 +84,8 @@
                 </div>
 
                 @if($errors->any())
-                    <div class="alert alert-danger bg-danger bg-opacity-10 border-0 text-danger rounded-3 mb-4 small p-3 d-flex align-items-center gap-2">
+                    <div
+                        class="alert alert-danger bg-danger bg-opacity-10 border-0 text-danger rounded-3 mb-4 small p-3 d-flex align-items-center gap-2">
                         <i class="fa-solid fa-circle-exclamation fs-5 flex-shrink-0"></i>
                         <div>{{ $errors->first() }}</div>
                     </div>
@@ -103,7 +104,7 @@
                         <div class="input-group login-input-group">
                             <span class="input-group-text"><i class="fa-solid fa-at"></i></span>
                             <input type="email" name="email" value="{{ old('email') }}" class="form-control"
-                                placeholder="admin@ipekmuhendislik.com.tr" required autofocus autocomplete="username">
+                                placeholder="admin@example.com" required autofocus autocomplete="username">
                         </div>
                     </div>
 
@@ -117,8 +118,8 @@
                             <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
                             <input type="password" name="password" id="passwordInput" class="form-control"
                                 placeholder="••••••••" required autocomplete="current-password">
-                            <button type="button" class="btn password-toggle-btn"
-                                id="togglePasswordBtn" title="Şifreyi Göster/Gizle">
+                            <button type="button" class="btn password-toggle-btn" id="togglePasswordBtn"
+                                title="Şifreyi Göster/Gizle">
                                 <i class="fa-solid fa-eye"></i>
                             </button>
                         </div>
