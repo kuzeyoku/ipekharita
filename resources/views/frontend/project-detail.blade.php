@@ -109,9 +109,23 @@
                         {!! render_svg_icon('phone', 'me-1') !!} {{ __('projects.get_quote_btn') }}
                     </a>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 @endsection
+
+@push('schema')
+<script type="application/ld+json">
+{!! json_encode(app(\App\Services\SeoService::class)->generateProjectSchema($project), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+</script>
+<script type="application/ld+json">
+{!! json_encode(app(\App\Services\SeoService::class)->generateBreadcrumbSchema([
+    __('common.home') => route('home'),
+    __('common.projects') => route('projects'),
+    $project->title => route('projects.detail', $project->slug),
+]), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+</script>
+@if(!empty($faqs) && count($faqs) > 0)
+<script type="application/ld+json">
+{!! json_encode(app(\App\Services\SeoService::class)->generateFaqSchema($faqs), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+</script>
+@endif
+@endpush
+

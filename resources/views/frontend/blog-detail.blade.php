@@ -101,9 +101,18 @@
                         </button>
                     </form>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 @endsection
+
+@push('schema')
+<script type="application/ld+json">
+{!! json_encode(app(\App\Services\SeoService::class)->generateBlogPostingSchema($post), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+</script>
+<script type="application/ld+json">
+{!! json_encode(app(\App\Services\SeoService::class)->generateBreadcrumbSchema([
+    __('common.home') => route('home'),
+    __('common.blog') => route('blog'),
+    $post->title => route('blog.detail', $post->slug),
+]), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+</script>
+@endpush
+

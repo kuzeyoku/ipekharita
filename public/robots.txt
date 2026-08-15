@@ -1,2 +1,25 @@
 User-agent: *
-Disallow:
+Disallow: /admin/
+Disallow: /editor-upload
+Disallow: /lang/
+Allow: /assets/
+Allow: /
+
+# AI Search Engine & LLM Crawlers
+User-agent: GPTBot
+Allow: /
+Disallow: /admin/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /admin/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /admin/
+
+Sitemap: https://ipekharita.com.tr/sitemap.xml

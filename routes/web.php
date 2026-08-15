@@ -19,12 +19,14 @@ use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\SiteModalController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\FaqController;
+use App\Http\Controllers\SitemapController;
 
 /*
 |--------------------------------------------------------------------------
 | Frontend Routes (English URLs)
 |--------------------------------------------------------------------------
 */
+Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
 Route::get('/', [FrontendController::class, 'index'])->name('home');
 Route::get('/about', [FrontendController::class, 'about'])->name('about');
 Route::get('/services', [FrontendController::class, 'services'])->name('services');
